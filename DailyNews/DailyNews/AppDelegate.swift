@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = navigationController
         navigationController.navigationBar.backgroundColor = .black
         navigationController.toolbar.barStyle = .black
-        navigationController.title = "NEWS"
         let appearance = UINavigationBar.appearance()
         appearance.titleTextAttributes = [.foregroundColor:UIColor.white,.font:UIFont(name: "Oranienbaum-Regular", size: 35)!]
         

@@ -14,6 +14,15 @@
 		A45388EB2A0BD1BB003FDB43 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45388E92A0BD1BB003FDB43 /* MainViewController.xib */; };
 		A45388F22A0C0ADD003FDB43 /* Oranienbaum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A45388F02A0C0A5A003FDB43 /* Oranienbaum-Regular.ttf */; };
 		A45388F42A0C0F82003FDB43 /* NewsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45388F32A0C0F82003FDB43 /* NewsLabel.swift */; };
+		A45388F72A0C1B0B003FDB43 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45388F62A0C1B0B003FDB43 /* MainViewModel.swift */; };
+		A45388FB2A0C1E12003FDB43 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45388F92A0C1E12003FDB43 /* CurrencyCell.swift */; };
+		A45388FC2A0C1E12003FDB43 /* CurrencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45388FA2A0C1E12003FDB43 /* CurrencyCell.xib */; };
+		A45388FF2A0C2B96003FDB43 /* CurrencyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45388FD2A0C2B96003FDB43 /* CurrencyCollectionViewCell.swift */; };
+		A45389002A0C2B96003FDB43 /* CurrencyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45388FE2A0C2B96003FDB43 /* CurrencyCollectionViewCell.xib */; };
+		A45389032A0C3650003FDB43 /* FirstLineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45389012A0C3650003FDB43 /* FirstLineCollectionViewCell.swift */; };
+		A45389042A0C3650003FDB43 /* FirstLineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45389022A0C3650003FDB43 /* FirstLineCollectionViewCell.xib */; };
+		A45389072A0C3CDA003FDB43 /* FirstLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45389052A0C3CDA003FDB43 /* FirstLineTableViewCell.swift */; };
+		A45389082A0C3CDA003FDB43 /* FirstLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45389062A0C3CDA003FDB43 /* FirstLineTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		A45388E92A0BD1BB003FDB43 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		A45388F02A0C0A5A003FDB43 /* Oranienbaum-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oranienbaum-Regular.ttf"; sourceTree = "<group>"; };
 		A45388F32A0C0F82003FDB43 /* NewsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLabel.swift; sourceTree = "<group>"; };
+		A45388F62A0C1B0B003FDB43 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A45388F92A0C1E12003FDB43 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		A45388FA2A0C1E12003FDB43 /* CurrencyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyCell.xib; sourceTree = "<group>"; };
+		A45388FD2A0C2B96003FDB43 /* CurrencyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCollectionViewCell.swift; sourceTree = "<group>"; };
+		A45388FE2A0C2B96003FDB43 /* CurrencyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyCollectionViewCell.xib; sourceTree = "<group>"; };
+		A45389012A0C3650003FDB43 /* FirstLineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLineCollectionViewCell.swift; sourceTree = "<group>"; };
+		A45389022A0C3650003FDB43 /* FirstLineCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstLineCollectionViewCell.xib; sourceTree = "<group>"; };
+		A45389052A0C3CDA003FDB43 /* FirstLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLineTableViewCell.swift; sourceTree = "<group>"; };
+		A45389062A0C3CDA003FDB43 /* FirstLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstLineTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,7 @@
 		A45388E32A0BD145003FDB43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A45388F62A0C1B0B003FDB43 /* MainViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +141,7 @@
 		A45388E62A0BD15D003FDB43 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A45388F82A0C1DE4003FDB43 /* CurrencyCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +168,21 @@
 				A45388F02A0C0A5A003FDB43 /* Oranienbaum-Regular.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		A45388F82A0C1DE4003FDB43 /* CurrencyCell */ = {
+			isa = PBXGroup;
+			children = (
+				A45388F92A0C1E12003FDB43 /* CurrencyCell.swift */,
+				A45388FA2A0C1E12003FDB43 /* CurrencyCell.xib */,
+				A45388FD2A0C2B96003FDB43 /* CurrencyCollectionViewCell.swift */,
+				A45388FE2A0C2B96003FDB43 /* CurrencyCollectionViewCell.xib */,
+				A45389052A0C3CDA003FDB43 /* FirstLineTableViewCell.swift */,
+				A45389062A0C3CDA003FDB43 /* FirstLineTableViewCell.xib */,
+				A45389012A0C3650003FDB43 /* FirstLineCollectionViewCell.swift */,
+				A45389022A0C3650003FDB43 /* FirstLineCollectionViewCell.xib */,
+			);
+			path = CurrencyCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +244,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A45388D92A0B9C38003FDB43 /* LaunchScreen.storyboard in Resources */,
+				A45389002A0C2B96003FDB43 /* CurrencyCollectionViewCell.xib in Resources */,
+				A45388FC2A0C1E12003FDB43 /* CurrencyCell.xib in Resources */,
 				A45388EB2A0BD1BB003FDB43 /* MainViewController.xib in Resources */,
+				A45389042A0C3650003FDB43 /* FirstLineCollectionViewCell.xib in Resources */,
 				A45388D62A0B9C38003FDB43 /* Assets.xcassets in Resources */,
+				A45389082A0C3CDA003FDB43 /* FirstLineTableViewCell.xib in Resources */,
 				A45388F22A0C0ADD003FDB43 /* Oranienbaum-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,9 +261,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45388FF2A0C2B96003FDB43 /* CurrencyCollectionViewCell.swift in Sources */,
+				A45388FB2A0C1E12003FDB43 /* CurrencyCell.swift in Sources */,
+				A45389072A0C3CDA003FDB43 /* FirstLineTableViewCell.swift in Sources */,
 				A45388F42A0C0F82003FDB43 /* NewsLabel.swift in Sources */,
 				A45388CD2A0B9C36003FDB43 /* AppDelegate.swift in Sources */,
+				A45389032A0C3650003FDB43 /* FirstLineCollectionViewCell.swift in Sources */,
 				A45388EA2A0BD1BB003FDB43 /* MainViewController.swift in Sources */,
+				A45388F72A0C1B0B003FDB43 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="DailyNews" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="tWb-5h-FCP" id="ZLL-qu-nno"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
