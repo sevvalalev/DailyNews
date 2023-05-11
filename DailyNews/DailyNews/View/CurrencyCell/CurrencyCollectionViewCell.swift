@@ -22,8 +22,8 @@ class CurrencyCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        currencyLabel.setSameFont(withText: "EUR-USD")
-        currencyRate.setSameFont(withText: "-0.40%")
+        currencyLabel.setSameFont(withText: "EUR-USD",fontSize: 16)
+        currencyRate.setSameFont(withText: "-0.40%",fontSize: 16)
     }
 
 }

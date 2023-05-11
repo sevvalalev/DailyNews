@@ -1,5 +1,5 @@
 //
-//  FirstLineCollectionViewCell.swift
+//  BusinessLineCollectionViewCell.swift
 //  DailyNews
 //
 //  Created by Şevval Alev on 10.05.2023.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class FirstLineCollectionViewCell: UICollectionViewCell {
+class BusinessLineCollectionViewCell: UICollectionViewCell {
 
     public static var identifier: String {
         get {
-            return "FirstLineCollectionViewCell"
+            return "BusinessLineCollectionViewCell"
         }
     }
     
@@ -26,9 +26,9 @@ class FirstLineCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        newsTitle.setSameFont()
-        newsDate.setSameFont()
-        newsAuthor.setSameFont()
+        newsTitle.setSameFont(fontSize: 20)
+        newsDate.setSameFont(fontSize: 12)
+        newsAuthor.setSameFont(fontSize: 12)
     }
 
 }

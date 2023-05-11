@@ -10,13 +10,17 @@ import UIKit
 class CurrencyCell: UITableViewCell {
 
     var spacing: CGFloat = 10
+    
     public static var identifier: String {
         get {
             return "CurrencyCell"
         }
     }
     
+    var viewModel: CurrencyCellViewModel = CurrencyCellViewModel()
+    
     @IBOutlet weak var currencyCollectionView: UICollectionView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +28,6 @@ class CurrencyCell: UITableViewCell {
         customNibs()
         setupCollectionView()
     }
-
 
     func setupCollectionView() {
         currencyCollectionView.delegate = self
@@ -41,7 +44,7 @@ class CurrencyCell: UITableViewCell {
 
 extension CurrencyCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return viewModel.numberOfItemsInSection()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,16 +58,15 @@ extension CurrencyCell: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension CurrencyCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfItemsPerRow:CGFloat = 4
-        let spacingBetweenCells:CGFloat = 10
-        let totalSpacing = (2 * self.spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells) //Amount of total spacing in a row
-        
-        if let collection = self.currencyCollectionView{
-            let width = (collection.bounds.width - totalSpacing)/numberOfItemsPerRow
-            let height = (collectionView.bounds.width - totalSpacing)/1.7
-            return CGSize(width: width, height: height)
-        }else{
-            return CGSize(width: 0, height: 0)
-        }
+            let numberOfItemsPerRow:CGFloat = 4.2
+            let spacingBetweenCells:CGFloat = 10
+            let totalSpacing = (2 * self.spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells)
+            if let collection = self.currencyCollectionView{
+                let width = (collection.bounds.width - totalSpacing)/numberOfItemsPerRow
+                let height = (collectionView.bounds.width - totalSpacing)/1.7
+                return CGSize(width: width, height: height)
+            }else{
+                return CGSize(width: 0, height: 0)
+            }
     }
 }

@@ -9,10 +9,11 @@ import Foundation
 import UIKit
 
 extension UILabel {
-    func setSameFont(withText text: String? = nil) {
-        self.font = UIFont(name: "Oranienbaum-Regular", size: 16)
+    func setSameFont(withText text: String? = nil, fontSize: CGFloat = 16) {
+        self.font = UIFont(name: "Oranienbaum-Regular", size: fontSize)
         if let text = text {
             self.text = text
         }
     }
 }
+

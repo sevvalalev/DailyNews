@@ -40,8 +40,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97368007899999998" green="0.87886005639999998" blue="0.88237345219999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jbw-jc-sPV" firstAttribute="centerX" secondItem="H52-ca-SpP" secondAttribute="centerX" id="1bV-bJ-kA0"/>
-                            <constraint firstItem="jbw-jc-sPV" firstAttribute="centerY" secondItem="H52-ca-SpP" secondAttribute="centerY" id="2zc-o0-PBV"/>
+                            <constraint firstItem="jbw-jc-sPV" firstAttribute="centerY" secondItem="H52-ca-SpP" secondAttribute="centerY" id="6R8-7O-tAB"/>
+                            <constraint firstItem="jbw-jc-sPV" firstAttribute="width" secondItem="H52-ca-SpP" secondAttribute="height" multiplier="104:125" id="IVB-X9-ktu"/>
+                            <constraint firstItem="jbw-jc-sPV" firstAttribute="width" secondItem="H52-ca-SpP" secondAttribute="height" multiplier="104:125" id="jKx-Ka-xdC"/>
+                            <constraint firstItem="jbw-jc-sPV" firstAttribute="centerX" secondItem="H52-ca-SpP" secondAttribute="centerX" id="sPu-6Y-VZ0"/>
                             <constraint firstAttribute="height" constant="125" id="xuf-DD-Dem"/>
                         </constraints>
                     </view>
