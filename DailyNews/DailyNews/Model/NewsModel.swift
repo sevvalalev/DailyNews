@@ -7,25 +7,40 @@
 
 import Foundation
 
-struct NewsResponse: Codable {
-    let status: String
-    let totalResults: Int
-    let articles: [Article]
-    
+struct NewsModel: Codable {
+    let offset, number, available: Int?
+    let news: [News]?
+}
+
+// MARK: - News
+struct News: Codable {
+    let id: Int?
+    let title, text: String?
+    let url: String?
+    let image: String?
+    let publishDate: String?
+    let author: Author?
+    let language: Language?
+    let sourceCountry: SourceCountry?
+    let sentiment: Double?
+
     enum CodingKeys: String, CodingKey {
-        case status
-        case totalResults = "total_results"
-        case articles
+        case id, title, text, url, image
+        case publishDate
+        case author, language
+        case sourceCountry
+        case sentiment
     }
 }
 
-struct Article: Codable {
-    let author: String?
-    let title: String
-    let description: String?
-    let url: String
-    let urlToImage: String?
-    let publishedAt: String
-    let content: String?
+enum Author: String, Codable {
+    case admin = "Admin"
 }
 
+enum Language: String, Codable {
+    case en = "en"
+}
+
+enum SourceCountry: String, Codable {
+    case bv = "bv"
+}
