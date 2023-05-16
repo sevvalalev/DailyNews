@@ -22,7 +22,7 @@ class MainViewModel {
         if indexPath.section == 0 {
             return 60
         }else if indexPath.section == 1 {
-            return 280
+            return 370
         }else if indexPath.section == 2 {
             return 60
         }else if indexPath.section == 3 {
@@ -54,5 +54,16 @@ class MainViewModel {
             }
         }
         return UITableViewCell()
+    }
+    
+    func getData() {
+        APICaller.getNews { result in
+            switch result {
+            case .success(let data):
+                print("\(result)")
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }

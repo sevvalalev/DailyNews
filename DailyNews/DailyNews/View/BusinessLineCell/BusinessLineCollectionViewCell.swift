@@ -20,15 +20,18 @@ class BusinessLineCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsDate: UILabel!
     @IBOutlet weak var newsAuthor: UILabel!
-    
+    @IBOutlet var textBackgroundView: UIView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        newsTitle.setSameFont(fontSize: 20)
-        newsDate.setSameFont(fontSize: 12)
-        newsAuthor.setSameFont(fontSize: 12)
+        
+        newsTitle.setSameFont(fontSize: 22)
+        newsDate.setSameFont(fontSize: 15)
+        newsAuthor.setSameFont(fontSize: 15)
     }
+
+   
 
 }

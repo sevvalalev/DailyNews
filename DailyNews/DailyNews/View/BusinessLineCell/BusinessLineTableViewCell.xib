@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,8 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Xt-iW-Iuh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Xt-iW-Iuh">
+                        <rect key="frame" x="8" y="10" width="312" height="105"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tf2-UF-wTR">
                             <size key="itemSize" width="128" height="128"/>
@@ -30,9 +31,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="2Xt-iW-Iuh" secondAttribute="bottom" id="3Ig-2o-3KV"/>
-                    <constraint firstItem="2Xt-iW-Iuh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6Ol-XM-aa2"/>
+                    <constraint firstItem="2Xt-iW-Iuh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6Ol-XM-aa2"/>
                     <constraint firstAttribute="trailing" secondItem="2Xt-iW-Iuh" secondAttribute="trailing" id="Ab6-mu-mWi"/>
-                    <constraint firstItem="2Xt-iW-Iuh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oE0-Mf-HGM"/>
+                    <constraint firstItem="2Xt-iW-Iuh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="oE0-Mf-HGM"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

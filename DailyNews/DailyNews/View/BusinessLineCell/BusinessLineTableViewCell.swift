@@ -25,20 +25,20 @@ class BusinessLineTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
         setupCollectionView()
         configureLayout()
         customNibs()
     }
-
+    
+    
     func configureLayout() {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.minimumInteritemSpacing = 8
-        layout.minimumLineSpacing = 8
+        layout.minimumLineSpacing = 10
         layout.scrollDirection = .horizontal
-        let screenWidth = UIScreen.main.bounds.width
-        let itemWidth = (screenWidth - 16) / 1
-        layout.itemSize = CGSize(width: itemWidth , height: itemWidth * 0.75)
         businessLineCollectionView.collectionViewLayout = layout
     }
     
@@ -51,7 +51,6 @@ class BusinessLineTableViewCell: UITableViewCell {
         let customCellNib: UINib = UINib(nibName: BusinessLineCollectionViewCell.identifier, bundle: nil)
         businessLineCollectionView.register(customCellNib, forCellWithReuseIdentifier: BusinessLineCollectionViewCell.identifier)
     }
-    
 }
 
 extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -65,18 +64,17 @@ extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewD
         }
         return UICollectionViewCell()
     }
-    
 }
 
 extension BusinessLineTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfItemsPerRow:CGFloat = 1.5
+        let numberOfItemsPerRow:CGFloat = 1.3
         let spacingBetweenCells:CGFloat = 10
         let totalSpacing = (2 * self.spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells) //Amount of total spacing in a row
         
         if let collection = self.businessLineCollectionView{
             let width = (collection.bounds.width - totalSpacing)/numberOfItemsPerRow
-            let height = (collectionView.bounds.width - totalSpacing)/1.4
+            let height = (collectionView.bounds.width - totalSpacing)/0.9
             return CGSize(width: width, height: height)
         }else{
             return CGSize(width: 0, height: 0)

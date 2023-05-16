@@ -31,9 +31,8 @@ class CategoryTableViewCell: UITableViewCell {
     
     func configureLayout() {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
-        layout.minimumInteritemSpacing = 2
-        layout.minimumLineSpacing = 2
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        layout.minimumLineSpacing = 8
         layout.scrollDirection = .horizontal
         categoryCollectionView.collectionViewLayout = layout
     }
@@ -66,14 +65,14 @@ extension CategoryTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
 
 extension CategoryTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfItemsPerRow:CGFloat = 3.2
-        let spacingBetweenCells:CGFloat = 8
+        let numberOfItemsPerRow:CGFloat = 3.5
+        let spacingBetweenCells:CGFloat = 2
         let totalSpacing = 8.0 //Amount of total spacing in a row
         
         if let collection = self.categoryCollectionView{
             let width = (collection.bounds.width - totalSpacing)/numberOfItemsPerRow
-            let height = (collectionView.bounds.width - totalSpacing)/3.2
-            return CGSize(width: width, height: height/2)
+            let height = (collectionView.bounds.width - totalSpacing)/3.8
+            return CGSize(width: width, height: height/2.5)
         }else{
             return CGSize(width: 0, height: 0)
         }

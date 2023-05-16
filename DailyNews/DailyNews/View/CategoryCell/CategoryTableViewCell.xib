@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,8 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HTy-TM-7DM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HTy-TM-7DM">
+                        <rect key="frame" x="8" y="0.0" width="312" height="44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IRk-mk-Ykf">
                             <size key="itemSize" width="128" height="128"/>
@@ -32,7 +33,7 @@
                     <constraint firstAttribute="trailing" secondItem="HTy-TM-7DM" secondAttribute="trailing" id="2Yu-9C-QpM"/>
                     <constraint firstAttribute="bottom" secondItem="HTy-TM-7DM" secondAttribute="bottom" id="2tC-fc-miA"/>
                     <constraint firstItem="HTy-TM-7DM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="R97-qg-OWf"/>
-                    <constraint firstItem="HTy-TM-7DM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aBm-u4-A9k"/>
+                    <constraint firstItem="HTy-TM-7DM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="aBm-u4-A9k"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

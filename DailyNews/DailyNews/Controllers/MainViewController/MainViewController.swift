@@ -22,6 +22,10 @@ class MainViewController: UIViewController {
         customNibs()
         configNav()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.getData()
+    }
 
     func setupTableView() {
         tableView.dataSource = self

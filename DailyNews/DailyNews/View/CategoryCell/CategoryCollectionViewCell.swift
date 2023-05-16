@@ -14,13 +14,15 @@ class CategoryCollectionViewCell: UICollectionViewCell {
             return "CategoryCollectionViewCell"
         }
     }
-    
+  
     @IBOutlet var categoryButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        categoryButton.titleLabel?.setSameFont(withText: "Category",fontSize: 20)
+        categoryButton.layer.cornerRadius = 10
+        categoryButton.layer.masksToBounds = true
+        categoryButton.titleLabel?.setSameFont(withText: "Category",fontSize: 18)
     }
 
     

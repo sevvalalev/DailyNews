@@ -8,39 +8,29 @@
 import Foundation
 
 struct NewsModel: Codable {
-    let offset, number, available: Int?
-    let news: [News]?
+    let offset: Int
+    let number: Int
+    let available: Int
+    let news: [News]
 }
 
-// MARK: - News
 struct News: Codable {
-    let id: Int?
-    let title, text: String?
-    let url: String?
-    let image: String?
-    let publishDate: String?
-    let author: Author?
-    let language: Language?
-    let sourceCountry: SourceCountry?
-    let sentiment: Double?
+    let id: Int
+    let title: String
+    let text: String
+    let url: String
+    let image: String
+    let publishDate: String
+    let author: String
+    let language: String
+    let sourceCountry: String
+    let sentiment: Double
 
     enum CodingKeys: String, CodingKey {
         case id, title, text, url, image
-        case publishDate
+        case publishDate = "publish_date"
         case author, language
-        case sourceCountry
+        case sourceCountry = "source_country"
         case sentiment
     }
-}
-
-enum Author: String, Codable {
-    case admin = "Admin"
-}
-
-enum Language: String, Codable {
-    case en = "en"
-}
-
-enum SourceCountry: String, Codable {
-    case bv = "bv"
 }

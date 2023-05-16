@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,8 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Vqd-Pl-guP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Vqd-Pl-guP">
+                        <rect key="frame" x="8" y="0.0" width="312" height="44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a0U-l4-VBR">
                             <size key="itemSize" width="128" height="128"/>
@@ -28,14 +29,16 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Vqd-Pl-guP" secondAttribute="bottom" id="1n6-Wu-tph"/>
                     <constraint firstAttribute="trailing" secondItem="Vqd-Pl-guP" secondAttribute="trailing" id="B6i-CT-ur6"/>
                     <constraint firstItem="Vqd-Pl-guP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oyt-cf-uJj"/>
-                    <constraint firstItem="Vqd-Pl-guP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rb6-uY-UgS"/>
+                    <constraint firstItem="Vqd-Pl-guP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="rb6-uY-UgS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="currencyCollectionView" destination="Vqd-Pl-guP" id="AAw-MY-icr"/>
             </connections>

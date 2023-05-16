@@ -35,6 +35,7 @@
 		A45389212A0D1495003FDB43 /* CategoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45389202A0D1495003FDB43 /* CategoryCellViewModel.swift */; };
 		A45389232A0D29AF003FDB43 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45389222A0D29AF003FDB43 /* NewsModel.swift */; };
 		A45389252A0D2CEF003FDB43 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45389242A0D2CEF003FDB43 /* APICaller.swift */; };
+		A46955CD2A12785A00B30911 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46955CC2A12785A00B30911 /* NetworkConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		A45389202A0D1495003FDB43 /* CategoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellViewModel.swift; sourceTree = "<group>"; };
 		A45389222A0D29AF003FDB43 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		A45389242A0D2CEF003FDB43 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		A46955CC2A12785A00B30911 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		F5111C07ED431882176A932F /* Pods_DailyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,7 +92,6 @@
 				605F4518B7989294AD4DAF8A /* Pods-DailyNews.debug.xcconfig */,
 				95640CDA24A02C2BCE993AB6 /* Pods-DailyNews.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -165,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				A45389242A0D2CEF003FDB43 /* APICaller.swift */,
+				A46955CC2A12785A00B30911 /* NetworkConstant.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -399,6 +401,7 @@
 				A453890A2A0CDC6A003FDB43 /* CurrencyCellViewModel.swift in Sources */,
 				A45389252A0D2CEF003FDB43 /* APICaller.swift in Sources */,
 				A45388F42A0C0F82003FDB43 /* NewsLabel.swift in Sources */,
+				A46955CD2A12785A00B30911 /* NetworkConstant.swift in Sources */,
 				A45389112A0CE596003FDB43 /* AllNewsTableViewCell.swift in Sources */,
 				A45389232A0D29AF003FDB43 /* NewsModel.swift in Sources */,
 				A45388CD2A0B9C36003FDB43 /* AppDelegate.swift in Sources */,
@@ -551,6 +554,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,6 +585,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
