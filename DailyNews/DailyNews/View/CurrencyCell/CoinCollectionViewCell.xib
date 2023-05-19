@@ -60,8 +60,8 @@
             </constraints>
             <size key="customSize" width="149" height="141"/>
             <connections>
-                <outlet property="coinName" destination="XoI-3g-Kwf" id="jLT-0f-1aC"/>
-                <outlet property="coinRate" destination="nwY-vv-vyP" id="DQJ-2a-n0z"/>
+                <outlet property="coinNameLabel" destination="XoI-3g-Kwf" id="jLT-0f-1aC"/>
+                <outlet property="coinRateLabel" destination="nwY-vv-vyP" id="DQJ-2a-n0z"/>
             </connections>
             <point key="canvasLocation" x="78.625954198473281" y="51.760563380281695"/>
         </collectionViewCell>

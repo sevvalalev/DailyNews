@@ -36,8 +36,10 @@ class CoinCell: UITableViewCell {
     
     func configure(viewModel: CoinCellViewModel?) {
         self.viewModel = viewModel
+        coinCollectionView.reloadData()
     }
 
+    
     func customNibs() {
         let customCellNib: UINib = UINib(nibName: "CoinCollectionViewCell", bundle: nil)
         coinCollectionView.register(customCellNib, forCellWithReuseIdentifier: CoinCollectionViewCell.identifier)
@@ -52,7 +54,8 @@ extension CoinCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = coinCollectionView.dequeueReusableCell(withReuseIdentifier: CoinCollectionViewCell.identifier, for: indexPath) as? CoinCollectionViewCell {
-            cell.configureCell(with: viewModel?.coinData.rates[indexPath.row])
+            let data = viewModel?.getItem(for: indexPath.row)
+            cell.configureCell(with: data?.0 ?? "", value: data?.1 ?? 0.0)
             return cell
         }
         return UICollectionViewCell()

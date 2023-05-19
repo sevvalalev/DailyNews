@@ -16,28 +16,22 @@ class CoinCollectionViewCell: UICollectionViewCell {
     }
 
     // MARK: IBOutlets
-    @IBOutlet weak var coinName: UILabel!
-    @IBOutlet weak var coinRate: UILabel!
+    @IBOutlet weak var coinNameLabel: UILabel!
+    @IBOutlet weak var coinRateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        coinName.setSameFont(fontSize: 16)
-        coinRate.setSameFont(fontSize: 16)
+        coinNameLabel.setSameFont(fontSize: 16)
+        coinRateLabel.setSameFont(fontSize: 16)
+    }
+    
+    func configureCell(with coinName: String, value: Double) {
+       
+        coinNameLabel.text = coinName
+        coinRateLabel.text = "\(value)"
+        
+        
     }
 
-    func configureCell(with coinData: CoinModel?) {
-        guard let coinData = coinData else {
-            return
-        }
-        
-        if let keys = coinData.rates?.keys.joined(separator: ", ") {
-            coinName.text = keys
-        }
-        
-        if let values = coinData.rates?.values.map({ String($0) }).joined(separator: ", ") {
-            coinRate.text = values
-        }
-        
-    }
 }
