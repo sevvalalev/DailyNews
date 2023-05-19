@@ -60,6 +60,7 @@ extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = businessLineCollectionView.dequeueReusableCell(withReuseIdentifier: BusinessLineCollectionViewCell.identifier, for: indexPath) as? BusinessLineCollectionViewCell {
+            //cell.textLabel?.text = self.cellDataSource[indexPath.row].
             return cell
         }
         return UICollectionViewCell()

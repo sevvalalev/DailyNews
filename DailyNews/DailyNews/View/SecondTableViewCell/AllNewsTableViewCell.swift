@@ -27,6 +27,7 @@ class AllNewsTableViewCell: UITableViewCell {
         exampleText()
     }
     
+    
     func exampleText() {
         newsTitle.setSameFont(withText: "Western academic student employees earn right to bargain - New bill supports student unionizati...", fontSize: 19)
         newsDate.setSameFont(withText: "April 28, 2023 at 6:05 p.m.", fontSize: 12)

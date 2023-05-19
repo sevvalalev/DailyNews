@@ -10,59 +10,90 @@ import UIKit
 
 class MainViewModel {
     
+    var isLoading: Observable<Bool> = Observable(true)
+    var isInitialDataLoaded: Observable<Bool> = Observable(false)
+    var newsDataSource: NewsModel?
+    var coinDataSource: CoinModel?
+        
+    private var dispatchGroup = DispatchGroup()
+    
     func numberOfSections() -> Int {
         return 4
     }
     
     func numberOfRows(in section: Int) -> Int {
-        return 1
+        if section == 3 {
+            return 1
+        } else {
+            return 1
+        }
     }
+    
     
     func heightForRowAt(indexPath: IndexPath) -> Int {
         if indexPath.section == 0 {
             return 60
-        }else if indexPath.section == 1 {
-            return 370
-        }else if indexPath.section == 2 {
-            return 60
-        }else if indexPath.section == 3 {
+        } else if indexPath.section == 1 {
+             return 370
+        } else if indexPath.section == 2 {
+             return 60
+        } else if indexPath.section == 3 {
             return 220
         }
         return 200
     }
     
-    func cellForRowAt(_ tableView: UITableView,indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: CurrencyCell.identifier, for: indexPath) as? CurrencyCell {
-                tableView.separatorStyle = .none
-                return cell
+    func loadInitialData() {
+        dispatchGroup.enter()
+        getAllData { result in
+            switch result {
+            case .success(let success):
+                self.newsDataSource = success
+            case .failure(let error):
+                print("ERR: While fetching all news -> \(error.localizedDescription)")
             }
-        }else if indexPath.section == 1 {
-            if let cell2 = tableView.dequeueReusableCell(withIdentifier: BusinessLineTableViewCell.identifier, for: indexPath) as? BusinessLineTableViewCell {
-                tableView.separatorStyle = .none
-                return cell2
-            }
-        }else if indexPath.section == 2 {
-            if let cell3 = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath) as? CategoryTableViewCell {
-                tableView.separatorStyle = .none
-                return cell3
-            }
-        }else if indexPath.section == 3 {
-            if let cell4 = tableView.dequeueReusableCell(withIdentifier: AllNewsTableViewCell.identifier, for: indexPath) as? AllNewsTableViewCell {
-                tableView.separatorStyle = .none
-                return cell4
-            }
+            self.dispatchGroup.leave()
         }
-        return UITableViewCell()
+        
+        dispatchGroup.enter()
+        getAllCoin { result in
+            switch result {
+            case .success(let success):
+                self.coinDataSource = success
+            case .failure(let error):
+                print("ERR: While fetching all coins -> \(error.localizedDescription)")
+            }
+            self.dispatchGroup.leave()
+        }
+        
+        dispatchGroup.notify(queue: .main) { [weak self] in
+            self?.isInitialDataLoaded.value = true
+        }
     }
-    
-    func getData() {
-        APICaller.getNews { result in
+}
+
+
+// MARK: - LOAD DATA
+private
+extension MainViewModel {
+    func getAllData(completion: @escaping(Result<NewsModel, Error>)->Void) {
+        APICaller.getAllNews { result in
             switch result {
             case .success(let data):
-                print("\(result)")
+                completion(.success(data))
             case .failure(let error):
-                print(error)
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func getAllCoin(completion: @escaping(Result<CoinModel, Error>)->Void) {
+        APICaller.getCoinData { result in
+            switch result {
+            case .success(let data):
+                completion(.success(data))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }

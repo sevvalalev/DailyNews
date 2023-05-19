@@ -1,5 +1,5 @@
 //
-//  CurrencyCell.swift
+//  CoinCell.swift
 //  DailyNews
 //
 //  Created by Şevval Alev on 10.05.2023.
@@ -7,20 +7,20 @@
 
 import UIKit
 
-class CurrencyCell: UITableViewCell {
+class CoinCell: UITableViewCell {
 
     var spacing: CGFloat = 10
     
+    @IBOutlet weak var coinCollectionView: UICollectionView!
+    
+    
     public static var identifier: String {
         get {
-            return "CurrencyCell"
+            return "CoinCell"
         }
     }
     
-    var viewModel: CurrencyCellViewModel = CurrencyCellViewModel()
-    
-    @IBOutlet weak var currencyCollectionView: UICollectionView!
-    
+    private var viewModel: CoinCellViewModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,25 +30,29 @@ class CurrencyCell: UITableViewCell {
     }
 
     func setupCollectionView() {
-        currencyCollectionView.delegate = self
-        currencyCollectionView.dataSource = self
+        coinCollectionView.delegate = self
+        coinCollectionView.dataSource = self
     }
     
+    func configure(viewModel: CoinCellViewModel?) {
+        self.viewModel = viewModel
+    }
 
     func customNibs() {
-        let customCellNib: UINib = UINib(nibName: "CurrencyCollectionViewCell", bundle: nil)
-        currencyCollectionView.register(customCellNib, forCellWithReuseIdentifier: CurrencyCollectionViewCell.identifier)
+        let customCellNib: UINib = UINib(nibName: "CoinCollectionViewCell", bundle: nil)
+        coinCollectionView.register(customCellNib, forCellWithReuseIdentifier: CoinCollectionViewCell.identifier)
     }
     
 }
 
-extension CurrencyCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CoinCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItemsInSection()
+        return viewModel?.numberOfItemsInSection() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = currencyCollectionView.dequeueReusableCell(withReuseIdentifier: CurrencyCollectionViewCell.identifier, for: indexPath) as? CurrencyCollectionViewCell {
+        if let cell = coinCollectionView.dequeueReusableCell(withReuseIdentifier: CoinCollectionViewCell.identifier, for: indexPath) as? CoinCollectionViewCell {
+            cell.configureCell(with: viewModel?.coinData.rates[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -56,12 +60,12 @@ extension CurrencyCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
 }
 
-extension CurrencyCell: UICollectionViewDelegateFlowLayout {
+extension CoinCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             let numberOfItemsPerRow:CGFloat = 4.2
             let spacingBetweenCells:CGFloat = 10
             let totalSpacing = (2 * self.spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells)
-            if let collection = self.currencyCollectionView{
+            if let collection = self.coinCollectionView{
                 let width = (collection.bounds.width - totalSpacing)/numberOfItemsPerRow
                 let height = (collectionView.bounds.width - totalSpacing)/1.7
                 return CGSize(width: width, height: height)

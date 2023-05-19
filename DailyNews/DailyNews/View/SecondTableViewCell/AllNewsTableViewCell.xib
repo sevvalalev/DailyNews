@@ -25,16 +25,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="327" height="191"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvL-zt-dJK">
-                                <rect key="frame" x="0.0" y="126" width="327" height="65"/>
+                                <rect key="frame" x="0.0" y="122.33333333333331" width="327" height="68.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2B-1h-FP3">
-                                        <rect key="frame" x="8" y="2" width="311" height="27.666666666666668"/>
+                                        <rect key="frame" x="8" y="2" width="311" height="20.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lyf-fb-h1M">
-                                        <rect key="frame" x="8" y="29.666666666666661" width="311" height="35.333333333333343"/>
+                                        <rect key="frame" x="8" y="22.333333333333332" width="311" height="35.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRi-aw-BOR">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="17"/>
@@ -58,7 +58,6 @@
                                     <constraint firstItem="lyf-fb-h1M" firstAttribute="leading" secondItem="kvL-zt-dJK" secondAttribute="leading" constant="8" id="b6j-0X-kc3"/>
                                     <constraint firstItem="x2B-1h-FP3" firstAttribute="leading" secondItem="kvL-zt-dJK" secondAttribute="leading" constant="8" id="m1H-Ap-DcF"/>
                                     <constraint firstItem="lyf-fb-h1M" firstAttribute="top" secondItem="x2B-1h-FP3" secondAttribute="bottom" id="npd-Ps-T7h"/>
-                                    <constraint firstAttribute="bottom" secondItem="lyf-fb-h1M" secondAttribute="bottom" id="qh1-uC-smD"/>
                                     <constraint firstAttribute="trailing" secondItem="x2B-1h-FP3" secondAttribute="trailing" constant="8" id="rKu-xA-sgV"/>
                                 </constraints>
                             </view>
@@ -71,7 +70,7 @@
                             <constraint firstItem="UcT-t9-y7e" firstAttribute="top" secondItem="Mdh-O4-ct7" secondAttribute="top" id="TLJ-Aq-Ehc"/>
                             <constraint firstItem="UcT-t9-y7e" firstAttribute="leading" secondItem="Mdh-O4-ct7" secondAttribute="leading" id="YA9-6N-f6l"/>
                             <constraint firstAttribute="trailing" secondItem="kvL-zt-dJK" secondAttribute="trailing" id="e0A-cZ-z7w"/>
-                            <constraint firstItem="kvL-zt-dJK" firstAttribute="height" secondItem="UcT-t9-y7e" secondAttribute="height" multiplier="0.34" id="gKQ-N2-LLv"/>
+                            <constraint firstItem="kvL-zt-dJK" firstAttribute="height" secondItem="UcT-t9-y7e" secondAttribute="height" multiplier="0.36" id="gKQ-N2-LLv"/>
                             <constraint firstItem="kvL-zt-dJK" firstAttribute="leading" secondItem="Mdh-O4-ct7" secondAttribute="leading" id="nFt-tw-CM3"/>
                         </constraints>
                     </view>
