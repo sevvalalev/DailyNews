@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     // MARK: ViewModel
     var viewModel: MainViewModel = MainViewModel()
     // MARK: variables
-    var cellDataSource: [News] = []
+    var cellDataSource: [AllNewsCellViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +117,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }else if indexPath.section == 3 {
             if let cell4 = tableView.dequeueReusableCell(withIdentifier: AllNewsTableViewCell.identifier, for: indexPath) as? AllNewsTableViewCell {
+                if let allNewsData = viewModel.newsDataSource?.news[indexPath.row] {
+                    let allNewsViewModel = AllNewsCellViewModel(allNewsData: allNewsData)
+                    cell4.configureCell(viewModel: allNewsViewModel)
+                }
                 tableView.separatorStyle = .none
                 return cell4
             }

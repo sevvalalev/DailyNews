@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AllNewsTableViewCell: UITableViewCell {
 
@@ -18,20 +19,23 @@ class AllNewsTableViewCell: UITableViewCell {
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsDate: UILabel!
-    @IBOutlet weak var newsAuthor: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
      
         self.contentView.layer.cornerRadius = 10
-        exampleText()
+        newsTitle.setSameFont(fontSize: 19)
+        newsDate.setSameFont(fontSize: 12)
     }
     
     
-    func exampleText() {
-        newsTitle.setSameFont(withText: "Western academic student employees earn right to bargain - New bill supports student unionizati...", fontSize: 19)
-        newsDate.setSameFont(withText: "April 28, 2023 at 6:05 p.m.", fontSize: 12)
-        newsAuthor.setSameFont(withText: "CASCADIADAILY", fontSize: 12)
+    func configureCell(viewModel: AllNewsCellViewModel) {
+        self.newsTitle.text = viewModel.title
+        self.newsDate.text = viewModel.publishDate
+        if let imageUrl = viewModel.imageUrl {
+            self.newsImageView.sd_setImage(with: imageUrl)
+        } else {
+            self.newsImageView.image = UIImage(named: "w")
+        }
     }
-    
 }

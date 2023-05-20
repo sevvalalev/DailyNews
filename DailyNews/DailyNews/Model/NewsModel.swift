@@ -19,7 +19,7 @@ struct News: Codable {
     let title: String
     let text: String
     let url: String
-    let image: String
+    let image: String?
     let publishDate: String
     let author: String
     let language: String

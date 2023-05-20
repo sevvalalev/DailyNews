@@ -23,7 +23,7 @@ class MainViewModel {
     
     func numberOfRows(in section: Int) -> Int {
         if section == 3 {
-            return 1
+            return newsDataSource?.news.count ?? 0
         } else {
             return 1
         }
@@ -69,6 +69,7 @@ class MainViewModel {
         dispatchGroup.notify(queue: .main) { [weak self] in
             self?.isInitialDataLoaded.value = true
         }
+        
     }
 }
 

@@ -197,84 +197,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "673E75FC-BF34-445A-9FD6-657FDB1C49AD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyNews/Controllers/MainViewController/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "bindViewModel()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "673E75FC-BF34-445A-9FD6-657FDB1C49AD - 90386ddd931ea713"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Array&lt;DailyNews.News&gt;&gt;) -&gt; () in DailyNews.MainViewController.bindViewModel() -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Controllers/MainViewController/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "673E75FC-BF34-445A-9FD6-657FDB1C49AD - 90386ddd931ea713"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Array&lt;DailyNews.News&gt;&gt;) -&gt; () in DailyNews.MainViewController.bindViewModel() -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Controllers/MainViewController/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "140">
-               </Location>
-               <Location
-                  uuid = "673E75FC-BF34-445A-9FD6-657FDB1C49AD - 90386ddd931ea713"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Array&lt;DailyNews.News&gt;&gt;) -&gt; () in DailyNews.MainViewController.bindViewModel() -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Controllers/MainViewController/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "200">
-               </Location>
-               <Location
-                  uuid = "673E75FC-BF34-445A-9FD6-657FDB1C49AD - f57efbc6b0ff9dde"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #2 (Swift.Optional&lt;Swift.Bool&gt;) -&gt; () in DailyNews.MainViewController.bindViewModel() -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Controllers/MainViewController/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F4E71BDC-E7E4-4517-8DDC-3247DE275244"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -284,15 +206,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
             endingLineNumber = "40"
-            landmarkName = "CoinCell"
-            landmarkType = "3">
+            landmarkName = "configure(viewModel:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "22866D3D-D1F5-4565-9B8D-6DC09E93AAB6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DailyNews/View/CurrencyCell/CoinCell.swift"
@@ -334,6 +256,22 @@
                   offsetFromSymbolStart = "1036">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DCE6BA7-4B37-48F2-A1F8-CA49F0310499"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyNews/View/SecondTableViewCell/AllNewsTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "configureCell(viewModel:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

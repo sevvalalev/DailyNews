@@ -38,6 +38,7 @@
 		A46955CD2A12785A00B30911 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46955CC2A12785A00B30911 /* NetworkConstant.swift */; };
 		A4C229DA2A160E6C00EEDB4A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C229D92A160E6C00EEDB4A /* Observable.swift */; };
 		A4C229DC2A169E9200EEDB4A /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C229DB2A169E9200EEDB4A /* CoinModel.swift */; };
+		A4C229DE2A18E3FB00EEDB4A /* AllNewsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C229DD2A18E3FB00EEDB4A /* AllNewsCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		A46955CC2A12785A00B30911 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		A4C229D92A160E6C00EEDB4A /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		A4C229DB2A169E9200EEDB4A /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		A4C229DD2A18E3FB00EEDB4A /* AllNewsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsCellViewModel.swift; sourceTree = "<group>"; };
 		F5111C07ED431882176A932F /* Pods_DailyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 				A45389092A0CDC6A003FDB43 /* CoinCellViewModel.swift */,
 				A453890B2A0CDC7F003FDB43 /* BusinessLineCellViewModel.swift */,
 				A45389202A0D1495003FDB43 /* CategoryCellViewModel.swift */,
+				A4C229DD2A18E3FB00EEDB4A /* AllNewsCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				A4C229DA2A160E6C00EEDB4A /* Observable.swift in Sources */,
 				A45389212A0D1495003FDB43 /* CategoryCellViewModel.swift in Sources */,
 				A45389072A0C3CDA003FDB43 /* BusinessLineTableViewCell.swift in Sources */,
+				A4C229DE2A18E3FB00EEDB4A /* AllNewsCellViewModel.swift in Sources */,
 				A453890A2A0CDC6A003FDB43 /* CoinCellViewModel.swift in Sources */,
 				A45389252A0D2CEF003FDB43 /* APICaller.swift in Sources */,
 				A45388F42A0C0F82003FDB43 /* NewsLabel.swift in Sources */,
