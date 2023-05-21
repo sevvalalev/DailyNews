@@ -8,29 +8,43 @@
 import Foundation
 
 struct NewsModel: Codable {
-    let offset: Int
-    let number: Int
-    let available: Int
+    let pagination: Pagination?
     let news: [News]
+    
+    enum CodingKeys: String, CodingKey {
+        case pagination
+        case news = "data"
+    }
 }
 
 struct News: Codable {
-    let id: Int
     let title: String
-    let text: String
+    let description: String
     let url: String
+    let source: String
     let image: String?
     let publishDate: String
-    let author: String
+    let author: String?
     let language: String
-    let sourceCountry: String
-    let sentiment: Double
-
+    let country: String
+    let category: Category
+    
     enum CodingKeys: String, CodingKey {
-        case id, title, text, url, image
-        case publishDate = "publish_date"
-        case author, language
-        case sourceCountry = "source_country"
-        case sentiment
+        case author, title, description, url, source, image, category, language, country
+        case publishDate = "published_at"
     }
+}
+
+enum Category: String, Codable {
+    case business = "business"
+    case general = "general"
+    case sports = "sports"
+}
+
+enum Language: String, Codable {
+    case en = "en"
+}
+
+struct Pagination: Codable {
+    let limit, offset, count, total: Int?
 }

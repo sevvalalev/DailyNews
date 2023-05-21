@@ -32,6 +32,7 @@ class AllNewsTableViewCell: UITableViewCell {
     func configureCell(viewModel: AllNewsCellViewModel) {
         self.newsTitle.text = viewModel.title
         self.newsDate.text = viewModel.publishDate
+        
         if let imageUrl = viewModel.imageUrl {
             self.newsImageView.sd_setImage(with: imageUrl)
         } else {

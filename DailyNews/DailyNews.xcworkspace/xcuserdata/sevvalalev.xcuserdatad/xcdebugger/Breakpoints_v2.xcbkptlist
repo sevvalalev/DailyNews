@@ -7,148 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "54412227-F283-4CC8-AADB-F681A9A4BC9F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyNews/Networking/APICaller.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "getAllNews(completionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "54412227-F283-4CC8-AADB-F681A9A4BC9F - eceb45e1249806e9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static DailyNews.APICaller.getNews(completionHandler: (Swift.Result&lt;DailyNews.NewsModel, DailyNews.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Networking/APICaller.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "624">
-               </Location>
-               <Location
-                  uuid = "54412227-F283-4CC8-AADB-F681A9A4BC9F - eceb45e1249806e9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static DailyNews.APICaller.getNews(completionHandler: (Swift.Result&lt;DailyNews.NewsModel, DailyNews.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Networking/APICaller.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "824">
-               </Location>
-               <Location
-                  uuid = "54412227-F283-4CC8-AADB-F681A9A4BC9F - eceb45e1249806e9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static DailyNews.APICaller.getNews(completionHandler: (Swift.Result&lt;DailyNews.NewsModel, DailyNews.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Networking/APICaller.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "700">
-               </Location>
-               <Location
-                  uuid = "54412227-F283-4CC8-AADB-F681A9A4BC9F - eceb45e1249806e9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static DailyNews.APICaller.getNews(completionHandler: (Swift.Result&lt;DailyNews.NewsModel, DailyNews.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Networking/APICaller.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "760">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EF957B69-7833-4E44-AC3B-89E492B86CD6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyNews/Networking/APICaller.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "getAllNews(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5CA38C9E-D828-42C8-BA32-7C67E8ABEDFE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DailyNews/Networking/APICaller.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "getAllNews(completionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5CA38C9E-D828-42C8-BA32-7C67E8ABEDFE - eceb45e1249806af"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static DailyNews.APICaller.getNews(completionHandler: (Swift.Result&lt;DailyNews.NewsModel, DailyNews.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Networking/APICaller.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "5CA38C9E-D828-42C8-BA32-7C67E8ABEDFE - eceb45e1249806af"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static DailyNews.APICaller.getNews(completionHandler: (Swift.Result&lt;DailyNews.NewsModel, DailyNews.NetworkError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "DailyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Networking/APICaller.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "260">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "09221ED2-21DD-424F-BEFD-3BBF144908D4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -261,16 +119,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8DCE6BA7-4B37-48F2-A1F8-CA49F0310499"
+            uuid = "62F60E4D-6780-4F60-B658-2CAB6CC6D647"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DailyNews/View/SecondTableViewCell/AllNewsTableViewCell.swift"
+            filePath = "DailyNews/Networking/APICaller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "configureCell(viewModel:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getAllNews(completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "62F60E4D-6780-4F60-B658-2CAB6CC6D647 - 8cf0e91821bfa335"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static DailyNews.APICaller.getAllNews(completionHandler: (Swift.Result&lt;DailyNews.NewsModel, DailyNews.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Networking/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "62F60E4D-6780-4F60-B658-2CAB6CC6D647 - 8cf0e91821bfa335"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static DailyNews.APICaller.getAllNews(completionHandler: (Swift.Result&lt;DailyNews.NewsModel, DailyNews.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sevvalalev/Desktop/DailyNews/DailyNews/DailyNews/Networking/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "684">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "748F603F-2DEA-4C39-8556-7F777F71DEB1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyNews/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "numberOfRows(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -16,7 +16,7 @@ enum NetworkError: Error {
 class APICaller {
     
     static func getAllNews(completionHandler: @escaping (_ result: Result<NewsModel,NetworkError>) -> Void ) {
-        let urlString = NetworkConstant.shared.serverAddress + "search-news?api-key=" + NetworkConstant.shared.apiKey
+        let urlString = NetworkConstant.shared.allNewsAddress
         
         guard let url = URL(string: urlString) else {
             completionHandler(.failure(.urlError))

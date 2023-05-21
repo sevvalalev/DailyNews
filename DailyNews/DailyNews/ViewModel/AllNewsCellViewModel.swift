@@ -9,16 +9,16 @@ import Foundation
 
 class AllNewsCellViewModel {
     
-    var id: Int
+    var author: String
     var title: String
     var publishDate: String
     var imageUrl: URL?
     
 
     init(allNewsData: News) {
-        self.id = allNewsData.id
         self.title = allNewsData.title
         self.publishDate = allNewsData.publishDate
+        self.author = allNewsData.author ?? ""
         self.imageUrl = makeImageUrl(allNewsData.image ?? "")
     }
     

@@ -14,22 +14,11 @@ class NetworkConstant {
     private init() {
         //singletone
     }
+    //http://api.mediastack.com/v1/news?access_key=41b9af5bf068a9e8d73aef7e1bb8d119
     
-    public var apiKey: String {
+    public var allNewsAddress: String {
         get {
-            return "1ed4eefc3aec4d948a8484e5e01978d8"
-        }
-    }
-    
-    public var serverAddress: String {
-        get {
-            return "https://api.worldnewsapi.com/"
-        }
-    }
-    
-    public var imageServerAddress: String {
-        get {
-            return ""
+            return "http://api.mediastack.com/v1/news?access_key=41b9af5bf068a9e8d73aef7e1bb8d119"
         }
     }
     
