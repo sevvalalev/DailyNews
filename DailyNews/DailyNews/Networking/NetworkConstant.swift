@@ -24,7 +24,8 @@ class NetworkConstant {
     
     public var coinApi: String {
         get{
-            return "http://api.coinlayer.com/live?access_key=2998aeedfd945f9010e69791db024969"
+           // return "http://api.coinlayer.com/live?access_key=2998aeedfd945f9010e69791db024969"
+            return ""
         }
     }
 }

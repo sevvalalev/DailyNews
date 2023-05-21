@@ -132,5 +132,4 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return CGFloat(viewModel.heightForRowAt(indexPath: indexPath))
     }
     
-    
 }

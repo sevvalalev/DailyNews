@@ -19,6 +19,7 @@ class AllNewsTableViewCell: UITableViewCell {
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsDate: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,17 +27,15 @@ class AllNewsTableViewCell: UITableViewCell {
         self.contentView.layer.cornerRadius = 10
         newsTitle.setSameFont(fontSize: 19)
         newsDate.setSameFont(fontSize: 12)
+        authorLabel.setSameFont(fontSize: 12)
     }
     
     
     func configureCell(viewModel: AllNewsCellViewModel) {
         self.newsTitle.text = viewModel.title
         self.newsDate.text = viewModel.publishDate
-        
-        if let imageUrl = viewModel.imageUrl {
-            self.newsImageView.sd_setImage(with: imageUrl)
-        } else {
-            self.newsImageView.image = UIImage(named: "w")
-        }
+        self.authorLabel.text = viewModel.author
+        newsImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        newsImageView.sd_setImage(with: URL(string: viewModel.imageUrl ?? "w"), placeholderImage: UIImage(named: "w"))
     }
 }
