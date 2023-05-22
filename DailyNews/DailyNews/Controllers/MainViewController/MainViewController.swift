@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     // MARK: ViewModel
     var viewModel: MainViewModel = MainViewModel()
     // MARK: variables
@@ -20,8 +21,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindViewModel()
         setupTableView()
+        bindViewModel()
         customNibs()
         configNav()
     }
@@ -37,7 +38,7 @@ class MainViewController: UIViewController {
                 return
             }
             DispatchQueue.main.async { [weak self] in
-                if isLoading {
+                if isLoading == true {
                     self?.indicator.startAnimating()
                 }else{
                     self?.indicator.stopAnimating()

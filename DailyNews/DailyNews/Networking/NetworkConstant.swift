@@ -14,17 +14,16 @@ class NetworkConstant {
     private init() {
         //singletone
     }
-    //http://api.mediastack.com/v1/news?access_key=41b9af5bf068a9e8d73aef7e1bb8d119
     
     public var allNewsAddress: String {
         get {
-            return "http://api.mediastack.com/v1/news?access_key=41b9af5bf068a9e8d73aef7e1bb8d119"
+            return "https://newsapi.org/v2/top-headlines?country=us&apiKey=0952307ff29044ad8273f2d2a177eb23"
         }
     }
     
     public var coinApi: String {
         get{
-           // return "http://api.coinlayer.com/live?access_key=2998aeedfd945f9010e69791db024969"
+            //return "http://api.coinlayer.com/live?access_key=2998aeedfd945f9010e69791db024969"
             return ""
         }
     }
