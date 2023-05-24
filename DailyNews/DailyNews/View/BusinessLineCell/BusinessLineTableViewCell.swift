@@ -17,7 +17,7 @@ class BusinessLineTableViewCell: UITableViewCell {
         }
     }
     
-    var viewModel: BusinessLineCellViewModel = BusinessLineCellViewModel()
+    var viewModel: BusinessLineCellViewModel?
     
     @IBOutlet var businessLineCollectionView: UICollectionView!
     
@@ -32,6 +32,10 @@ class BusinessLineTableViewCell: UITableViewCell {
         customNibs()
     }
     
+    func configure(viewModel: BusinessLineCellViewModel?) {
+        self.viewModel = viewModel
+        businessLineCollectionView.reloadData()
+    }
     
     func configureLayout() {
         let layout = UICollectionViewFlowLayout()
@@ -55,12 +59,15 @@ class BusinessLineTableViewCell: UITableViewCell {
 
 extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItemsInSection()
+        return viewModel?.businessData?.news.count ?? 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = businessLineCollectionView.dequeueReusableCell(withReuseIdentifier: BusinessLineCollectionViewCell.identifier, for: indexPath) as? BusinessLineCollectionViewCell {
-            //cell.textLabel?.text = self.cellDataSource[indexPath.row].
+            if let businessData = viewModel?.businessData?.news[indexPath.row] {
+                let businessViewModel = BusinessLineCellViewModel(businessData: businessData)
+                cell.configure(viewModel: businessViewModel)
+            }
             return cell
         }
         return UICollectionViewCell()

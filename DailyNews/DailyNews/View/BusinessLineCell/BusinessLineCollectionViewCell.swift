@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BusinessLineCollectionViewCell: UICollectionViewCell {
 
@@ -31,7 +32,13 @@ class BusinessLineCollectionViewCell: UICollectionViewCell {
         newsDate.setSameFont(fontSize: 15)
         newsAuthor.setSameFont(fontSize: 15)
     }
-
+    
+    func configure(viewModel: BusinessLineCellViewModel) {
+        self.newsTitle.text = viewModel.title
+        self.newsDate.text = viewModel.publishDate
+        self.newsAuthor.text = viewModel.author
+        self.imageView.sd_setImage(with: URL(string: viewModel.imageUrl ?? ""), placeholderImage: UIImage(named: ""))
+    }
    
 
 }

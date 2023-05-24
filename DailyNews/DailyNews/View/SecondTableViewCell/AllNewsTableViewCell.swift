@@ -35,6 +35,6 @@ class AllNewsTableViewCell: UITableViewCell {
         self.newsTitle.text = viewModel.title
         self.newsDate.text = viewModel.publishDate
         self.authorLabel.text = viewModel.author
-        newsImageView.sd_setImage(with: URL(string: viewModel.imageUrl ?? "w"), placeholderImage: UIImage(named: "w"))
+        newsImageView.sd_setImage(with: URL(string: viewModel.imageUrl ?? ""), placeholderImage: UIImage(named: ""))
     }
 }

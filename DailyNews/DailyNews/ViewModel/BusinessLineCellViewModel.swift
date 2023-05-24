@@ -9,16 +9,19 @@ import Foundation
 
 class BusinessLineCellViewModel {
     
-    var isLoading: Observable<Bool> = Observable(false)
-    var cellDataSource: Observable<[News]> = Observable(nil)
-    var dataSource: NewsModel?
+    var businessData: NewsModel?
     
+    var author: String
+    var title: String
+    var publishDate: String
+    var imageUrl: String?
     
-    func numberOfItemsInSection() -> Int {
-        return 6
+
+    init(businessData: News) {
+        self.title = businessData.title
+        self.publishDate = businessData.publishDate ?? "0"
+        self.author = businessData.author ?? ""
+        self.imageUrl = businessData.image
     }
     
-    func numberOfRows(in section: Int) -> Int {
-        return dataSource?.news.count ?? 1
-    }
 }
