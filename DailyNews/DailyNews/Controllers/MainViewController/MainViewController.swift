@@ -108,7 +108,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }else if indexPath.section == 1 {
             if let cell2 = tableView.dequeueReusableCell(withIdentifier: BusinessLineTableViewCell.identifier, for: indexPath) as? BusinessLineTableViewCell {
                 tableView.separatorStyle = .none
-
                 return cell2
             }
         }else if indexPath.section == 2 {

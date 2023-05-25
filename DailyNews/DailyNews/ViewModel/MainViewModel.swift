@@ -26,13 +26,12 @@ class MainViewModel {
         if section == 3 {
             return newsDataSource?.news.count ?? 0
         } else if section == 1 {
-            return 1
+            return businessDataSource?.news.count ?? 1
         } else {
             return 1
         }
     }
     
-
     func heightForRowAt(indexPath: IndexPath) -> Int {
         if indexPath.section == 0 {
             return 60

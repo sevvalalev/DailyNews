@@ -16,7 +16,7 @@ class BusinessLineCellViewModel {
     var publishDate: String
     var imageUrl: String?
     
-
+    
     init(businessData: News) {
         self.title = businessData.title
         self.publishDate = businessData.publishDate ?? "0"

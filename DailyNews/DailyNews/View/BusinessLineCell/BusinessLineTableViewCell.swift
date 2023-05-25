@@ -19,6 +19,7 @@ class BusinessLineTableViewCell: UITableViewCell {
     
     var viewModel: BusinessLineCellViewModel?
     
+    
     @IBOutlet var businessLineCollectionView: UICollectionView!
     
     
@@ -59,7 +60,7 @@ class BusinessLineTableViewCell: UITableViewCell {
 
 extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.businessData?.news.count ?? 1
+        return viewModel?.businessData?.news.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
