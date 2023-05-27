@@ -33,11 +33,6 @@ class BusinessLineTableViewCell: UITableViewCell {
         customNibs()
     }
     
-    func configure(viewModel: BusinessLineCellViewModel?) {
-        self.viewModel = viewModel
-        businessLineCollectionView.reloadData()
-    }
-    
     func configureLayout() {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -52,6 +47,11 @@ class BusinessLineTableViewCell: UITableViewCell {
         businessLineCollectionView.dataSource = self
     }
     
+    func configure(viewModel: BusinessLineCellViewModel?) {
+        self.viewModel = viewModel
+        businessLineCollectionView.reloadData()
+    }
+    
     func customNibs() {
         let customCellNib: UINib = UINib(nibName: BusinessLineCollectionViewCell.identifier, bundle: nil)
         businessLineCollectionView.register(customCellNib, forCellWithReuseIdentifier: BusinessLineCollectionViewCell.identifier)
@@ -60,12 +60,12 @@ class BusinessLineTableViewCell: UITableViewCell {
 
 extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.businessData?.news.count ?? 0
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = businessLineCollectionView.dequeueReusableCell(withReuseIdentifier: BusinessLineCollectionViewCell.identifier, for: indexPath) as? BusinessLineCollectionViewCell {
-            if let businessData = viewModel?.businessData?.news[indexPath.row] {
+            if let businessData = viewModel?.businessDataSource?.news[indexPath.row] {
                 let businessViewModel = BusinessLineCellViewModel(businessData: businessData)
                 cell.configure(viewModel: businessViewModel)
             }

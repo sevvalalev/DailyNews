@@ -66,10 +66,15 @@ class APICaller {
         
         URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
             if error == nil,
-               let data = dataResponse,
-               let resultData = try? JSONDecoder().decode(NewsModel.self, from: data) {
-                completionHandler(.success(resultData))
-            }else{
+               let data = dataResponse {
+                do {
+                    let resultData = try JSONDecoder().decode(NewsModel.self, from: data)
+                    completionHandler(.success(resultData))
+                } catch let error {
+                    print("Error while parsing data \(error)")
+                    completionHandler(.failure(.canNotParseData))
+                }
+            } else {
                 completionHandler(.failure(.canNotParseData))
             }
         }.resume()

@@ -16,7 +16,7 @@ class AllNewsCellViewModel {
     
 
     init(allNewsData: News) {
-        self.title = allNewsData.title
+        self.title = allNewsData.title ?? ""
         self.publishDate = allNewsData.publishDate ?? "0"
         self.author = allNewsData.author ?? ""
         self.imageUrl = allNewsData.image 

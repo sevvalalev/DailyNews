@@ -22,9 +22,9 @@ struct NewsModel: Codable {
 struct News: Codable {
     let source: Source?
     let author: String?
-    let title, description: String
-    let url: String
-    let image: String
+    let title, description: String?
+    let url: String?
+    let image: String?
     let publishDate: String?
     let content: String?
     

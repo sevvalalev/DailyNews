@@ -25,8 +25,6 @@ class MainViewModel {
     func numberOfRows(in section: Int) -> Int {
         if section == 3 {
             return newsDataSource?.news.count ?? 0
-        } else if section == 1 {
-            return businessDataSource?.news.count ?? 1
         } else {
             return 1
         }
