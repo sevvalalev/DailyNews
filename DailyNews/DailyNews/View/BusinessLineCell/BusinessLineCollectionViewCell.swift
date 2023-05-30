@@ -33,11 +33,11 @@ class BusinessLineCollectionViewCell: UICollectionViewCell {
         newsAuthor.setSameFont(fontSize: 15)
     }
     
-    func configure(viewModel: BusinessLineCellViewModel) {
-        self.newsTitle.text = viewModel.title
-        self.newsDate.text = viewModel.publishDate
-        self.newsAuthor.text = viewModel.author
-        self.imageView.sd_setImage(with: URL(string: viewModel.imageUrl ?? ""), placeholderImage: UIImage(named: ""))
+    func configure(with businessData: News?) {
+        self.newsTitle.text = businessData?.title
+        self.newsDate.text = businessData?.publishDate
+        self.newsAuthor.text = businessData?.author
+        self.imageView.sd_setImage(with: URL(string: businessData?.image ?? ""), placeholderImage: UIImage(named: ""))
     }
    
 

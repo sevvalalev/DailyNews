@@ -107,6 +107,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }else if indexPath.section == 1 {
             if let cell2 = tableView.dequeueReusableCell(withIdentifier: BusinessLineTableViewCell.identifier, for: indexPath) as? BusinessLineTableViewCell {
+                if let businessData = viewModel.businessDataSource {
+                    let businessNews = BusinessLineCellViewModel(businessData: businessData)
+                    cell2.configure(viewModel: businessNews)
+                }
                 tableView.separatorStyle = .none
                 return cell2
             }

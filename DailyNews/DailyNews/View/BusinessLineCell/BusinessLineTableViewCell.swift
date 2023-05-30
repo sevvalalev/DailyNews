@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BusinessLineTableViewCell: UITableViewCell {
 
@@ -27,10 +28,10 @@ class BusinessLineTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        
+        customNibs()
         setupCollectionView()
         configureLayout()
-        customNibs()
+        
     }
     
     func configureLayout() {
@@ -60,15 +61,13 @@ class BusinessLineTableViewCell: UITableViewCell {
 
 extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return viewModel?.numberOfItemsInSection() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = businessLineCollectionView.dequeueReusableCell(withReuseIdentifier: BusinessLineCollectionViewCell.identifier, for: indexPath) as? BusinessLineCollectionViewCell {
-            if let businessData = viewModel?.businessDataSource?.news[indexPath.row] {
-                let businessViewModel = BusinessLineCellViewModel(businessData: businessData)
-                cell.configure(viewModel: businessViewModel)
-            }
+            let data = viewModel?.businessData?.news[indexPath.row]
+            cell.configure(with: data)
             return cell
         }
         return UICollectionViewCell()

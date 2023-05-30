@@ -21,11 +21,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.toolbar.barStyle = .black
         let appearance = UINavigationBar.appearance()
         appearance.titleTextAttributes = [.foregroundColor:UIColor.white,.font:UIFont(name: "Oranienbaum-Regular", size: 35)!]
-        
         window.makeKeyAndVisible()
         
         self.window = window
+        
+        let tabBarController = UITabBarController()
+        tabBarController.tabBar.barStyle = .black
+        tabBarController.tabBar.tintColor = .white
+        tabBarController.tabBar.unselectedItemTintColor = .gray
+        
+        let mainViewController = UINavigationController(rootViewController: MainViewController())
+        mainViewController.tabBarItem = UITabBarItem(title: "News", image: UIImage(systemName: "text.justify"), tag: 1)
+        mainViewController.navigationBar.backgroundColor = .black
+        mainViewController.toolbar.barStyle = .black
+        
+        let searchViewController = UINavigationController(rootViewController: UIViewController())
+        searchViewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "magnifyingglass"), tag: 2)
+        searchViewController.navigationBar.backgroundColor = .black
+        searchViewController.toolbar.barStyle = .black
+        
+        let favoritesViewController = UINavigationController(rootViewController: UIViewController())
+        favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(named: "heart.fill"), tag: 2)
+        favoritesViewController.navigationBar.backgroundColor = .black
+        favoritesViewController.toolbar.barStyle = .black
+        
+        tabBarController.viewControllers = [mainViewController,searchViewController,favoritesViewController]
+        
+        window.rootViewController = tabBarController
+        
+        
+        
         return true
+        
     }
 }
 

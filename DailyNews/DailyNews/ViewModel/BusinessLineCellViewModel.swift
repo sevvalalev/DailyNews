@@ -9,17 +9,14 @@ import Foundation
 
 class BusinessLineCellViewModel {
     
-    var author: String
-    var title: String
-    var publishDate: String
-    var imageUrl: String?
+    var businessData: NewsModel?
     
+    init(businessData: NewsModel?) {
+        self.businessData = businessData
+    }
     
-    init(businessData: News) {
-        self.title = businessData.title ?? ""
-        self.publishDate = businessData.publishDate ?? "0"
-        self.author = businessData.author ?? ""
-        self.imageUrl = businessData.image
+    func numberOfItemsInSection() -> Int{
+        return businessData?.news.count ?? 1
     }
     
 }
