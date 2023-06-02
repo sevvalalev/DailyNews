@@ -25,8 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = window
         
+        // MARK: TabBar
         let tabBarController = UITabBarController()
         tabBarController.tabBar.barStyle = .black
+        tabBarController.tabBar.backgroundColor = .black
         tabBarController.tabBar.tintColor = .white
         tabBarController.tabBar.unselectedItemTintColor = .gray
         
@@ -35,13 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainViewController.navigationBar.backgroundColor = .black
         mainViewController.toolbar.barStyle = .black
         
-        let searchViewController = UINavigationController(rootViewController: UIViewController())
-        searchViewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "magnifyingglass"), tag: 2)
+        let searchViewController = UINavigationController(rootViewController: SearchViewController())
+        searchViewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 2)
         searchViewController.navigationBar.backgroundColor = .black
         searchViewController.toolbar.barStyle = .black
         
-        let favoritesViewController = UINavigationController(rootViewController: UIViewController())
-        favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(named: "heart.fill"), tag: 2)
+        let favoritesViewController = UINavigationController(rootViewController: FavoritesViewController())
+        favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "heart.fill"), tag: 2)
         favoritesViewController.navigationBar.backgroundColor = .black
         favoritesViewController.toolbar.barStyle = .black
         

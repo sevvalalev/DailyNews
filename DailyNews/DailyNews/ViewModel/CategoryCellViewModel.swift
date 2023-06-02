@@ -9,8 +9,10 @@ import Foundation
 
 class CategoryCellViewModel {
     
+    let categories = ["Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"]
+    
     func numberOfItemsInSection() -> Int {
-        return 6
+        return categories.count ?? 1
     }
     
 }

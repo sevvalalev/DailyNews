@@ -36,7 +36,7 @@ class BusinessLineTableViewCell: UITableViewCell {
     
     func configureLayout() {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)
         layout.minimumInteritemSpacing = 8
         layout.minimumLineSpacing = 10
         layout.scrollDirection = .horizontal

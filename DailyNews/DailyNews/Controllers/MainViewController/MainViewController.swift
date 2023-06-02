@@ -62,7 +62,6 @@ class MainViewController: UIViewController {
     func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        
     }
     
     func configNav() {
@@ -124,6 +123,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 if let allNewsData = viewModel.newsDataSource?.news[indexPath.row] {
                     let allNewsViewModel = AllNewsCellViewModel(allNewsData: allNewsData)
                     cell4.configureCell(viewModel: allNewsViewModel)
+                    cell4.selectionStyle = .none
                 }
                 tableView.separatorStyle = .none
                 return cell4

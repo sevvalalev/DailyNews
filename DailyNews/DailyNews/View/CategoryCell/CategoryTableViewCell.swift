@@ -31,7 +31,7 @@ class CategoryTableViewCell: UITableViewCell {
     
     func configureLayout() {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 8)
         layout.minimumLineSpacing = 8
         layout.scrollDirection = .horizontal
         categoryCollectionView.collectionViewLayout = layout
@@ -56,6 +56,8 @@ extension CategoryTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier, for: indexPath) as? CategoryCollectionViewCell {
+            let category = viewModel.categories[indexPath.item]
+            cell.configure(category: category)
             return cell
         }
         return UICollectionViewCell()

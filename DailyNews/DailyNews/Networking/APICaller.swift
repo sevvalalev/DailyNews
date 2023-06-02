@@ -26,11 +26,11 @@ class APICaller {
         URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
             if error == nil,
                let data = dataResponse,
-                let resultData = try? JSONDecoder().decode(NewsModel.self, from: data) {
-                    completionHandler(.success(resultData))
-                } else {
-                    completionHandler(.failure(.canNotParseData))
-                }
+               let resultData = try? JSONDecoder().decode(NewsModel.self, from: data) {
+                completionHandler(.success(resultData))
+            } else {
+                completionHandler(.failure(.canNotParseData))
+            }
         }.resume()
         
     }
@@ -46,11 +46,11 @@ class APICaller {
         URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
             if error == nil,
                let data = dataResponse,
-                let resultData = try? JSONDecoder().decode(CoinModel.self, from: data) {
-                    completionHandler(.success(resultData))
-                } else {
-                    completionHandler(.failure(.canNotParseData))
-                }
+               let resultData = try? JSONDecoder().decode(CoinModel.self, from: data) {
+                completionHandler(.success(resultData))
+            } else {
+                completionHandler(.failure(.canNotParseData))
+            }
         }.resume()
         
     }
@@ -61,7 +61,7 @@ class APICaller {
         
         guard let url = URL(string: urlString) else {
             completionHandler(.failure(.urlError))
-                return
+            return
         }
         
         URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
@@ -79,4 +79,28 @@ class APICaller {
             }
         }.resume()
     }
-}
+    
+    static func getSearchRequest(searchedText: String, completionHandler: @escaping ( _ result:Result<NewsModel,NetworkError>) -> Void)  {
+        
+        let urlString = NetworkConstant.shared.allNewsAddress + "&q=\(searchedText)"
+        guard let url = URL(string: urlString) else {
+            completionHandler(.failure(.urlError))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
+            if error == nil,
+               let data  = dataResponse {
+                do {
+                    let resultData = try JSONDecoder().decode(NewsModel.self, from: data)
+                    completionHandler(.success(resultData))
+                } catch let error {
+                    print("Error while parsing data \(error)")
+                    completionHandler(.failure(.canNotParseData))
+                 }
+                } else {
+                    completionHandler(.failure(.canNotParseData))
+                }
+            }
+        }
+    }
