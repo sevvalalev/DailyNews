@@ -31,29 +31,24 @@ class SearchViewModel {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { dataResponse, _, error in
-            if let error = error {
-                print("ERR: Search request failed -> \(error.localizedDescription)")
-                completionHandler(.failure(.canNotParseData))
-                return
-            }
-            
-            if let data = dataResponse {
-                do {
-                    let resultData = try JSONDecoder().decode(NewsModel.self, from: data)
-                    completionHandler(.success(resultData))
-                } catch let error {
-                    print("ERR: Error while parsing search data -> \(error)")
+        URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
+            if error == nil,
+                 let data = dataResponse {
+                    do {
+                        let resultData = try JSONDecoder().decode(NewsModel.self, from: data)
+                        completionHandler(.success(resultData))
+                    } catch let error {
+                        print("ERR: Error while parsin data -> \(error)")
+                        completionHandler(.failure(.canNotParseData))
+                    }
+                } else {
                     completionHandler(.failure(.canNotParseData))
                 }
-            } else {
-                completionHandler(.failure(.canNotParseData))
-            }
         }.resume()
     }
     
     func numberOfRowsInSection() -> Int {
-        return searchResults?.news.count ?? 3
+        return searchResults?.news.count ?? 0
     }
     
     func heightForRowAt() -> Int {

@@ -29,7 +29,7 @@
                     </connections>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eff-6W-EeR">
-                    <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                    <rect key="frame" x="8" y="115" width="377" height="703"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -37,8 +37,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vWd-pd-WLl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0XC-H5-fAP"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eff-6W-EeR" secondAttribute="trailing" id="1AW-AZ-cFi"/>
-                <constraint firstItem="eff-6W-EeR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Ol-Z4-gUc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eff-6W-EeR" secondAttribute="trailing" constant="8" id="1AW-AZ-cFi"/>
+                <constraint firstItem="eff-6W-EeR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="1Ol-Z4-gUc"/>
                 <constraint firstItem="eff-6W-EeR" firstAttribute="top" secondItem="vWd-pd-WLl" secondAttribute="bottom" id="3NS-h6-Gx6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eff-6W-EeR" secondAttribute="bottom" id="Ibd-Mm-cAC"/>
                 <constraint firstItem="vWd-pd-WLl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YIO-Lf-EOB"/>

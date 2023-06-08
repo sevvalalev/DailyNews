@@ -43,8 +43,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier,for: indexPath) as? SearchTableViewCell {
             let data = viewModel.searchResults?.news[indexPath.row]
             cell.configure(with: data)
+            cell.selectionStyle = .none
             return cell
         }
+        tableView.separatorStyle = .none
         return UITableViewCell()
     }
     
