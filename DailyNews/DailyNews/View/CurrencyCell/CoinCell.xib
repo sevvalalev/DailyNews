@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Vqd-Pl-guP">
-                        <rect key="frame" x="8" y="0.0" width="312" height="44"/>
+                        <rect key="frame" x="8" y="8" width="312" height="36"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a0U-l4-VBR">
                             <size key="itemSize" width="128" height="128"/>
@@ -33,7 +33,7 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Vqd-Pl-guP" secondAttribute="bottom" id="1n6-Wu-tph"/>
                     <constraint firstAttribute="trailing" secondItem="Vqd-Pl-guP" secondAttribute="trailing" id="B6i-CT-ur6"/>
-                    <constraint firstItem="Vqd-Pl-guP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oyt-cf-uJj"/>
+                    <constraint firstItem="Vqd-Pl-guP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="oyt-cf-uJj"/>
                     <constraint firstItem="Vqd-Pl-guP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="rb6-uY-UgS"/>
                 </constraints>
             </tableViewCellContentView>

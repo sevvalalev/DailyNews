@@ -20,13 +20,13 @@ class BusinessLineTableViewCell: UITableViewCell {
     
     var viewModel: BusinessLineCellViewModel?
     
-    
     @IBOutlet var businessLineCollectionView: UICollectionView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         
         customNibs()
         setupCollectionView()
@@ -71,6 +71,15 @@ extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewD
             return cell
         }
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            let selectedNews = viewModel?.businessData?.news[indexPath.row]
+            let vc = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
+            vc.news = selectedNews
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

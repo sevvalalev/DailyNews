@@ -54,7 +54,7 @@ class MainViewModel {
             }
             self.dispatchGroup.leave()
         }
-        /*
+        
         dispatchGroup.enter()
         getAllCoin { result in
             switch result {
@@ -65,7 +65,7 @@ class MainViewModel {
             }
             self.dispatchGroup.leave()
         }
-        */
+        
         
         dispatchGroup.enter()
         getBusinessData { result in
@@ -100,7 +100,7 @@ extension MainViewModel {
         }
     }
     
-    /*func getAllCoin(completion: @escaping(Result<CoinModel, Error>)->Void) {
+    func getAllCoin(completion: @escaping(Result<CoinModel, Error>)->Void) {
         APICaller.getCoinData { result in
             switch result {
             case .success(let data):
@@ -110,7 +110,7 @@ extension MainViewModel {
             }
         }
     }
-     */
+     
     
     func getBusinessData(completion: @escaping(Result<NewsModel, Error>) -> Void) {
         APICaller.getDataByCategory(categoryName: "business") { result in

@@ -17,3 +17,11 @@ extension UILabel {
     }
 }
 
+extension UITextView {
+    func setSameFont(withText text: String? = nil, fontSize: CGFloat = 16) {
+        self.font = UIFont(name: "Oranienbaum-Regular", size: fontSize)
+        if let text = text {
+            self.text = text
+        }
+    }
+}

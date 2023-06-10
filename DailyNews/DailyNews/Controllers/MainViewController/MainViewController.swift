@@ -123,7 +123,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 if let allNewsData = viewModel.newsDataSource?.news[indexPath.row] {
                     let allNewsViewModel = AllNewsCellViewModel(allNewsData: allNewsData)
                     cell4.configureCell(viewModel: allNewsViewModel)
-                    cell4.selectionStyle = .none
                 }
                 tableView.separatorStyle = .none
                 return cell4
@@ -131,6 +130,17 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         if indexPath.section == 3 {
+            let selectedNews = viewModel.newsDataSource?.news[indexPath.row]
+            let vc = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
+            vc.news = selectedNews
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(viewModel.heightForRowAt(indexPath: indexPath))
