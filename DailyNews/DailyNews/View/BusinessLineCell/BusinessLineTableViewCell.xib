@@ -18,10 +18,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2Xt-iW-Iuh">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Mc7-jB-uw9">
                         <rect key="frame" x="8" y="10" width="312" height="105"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tf2-UF-wTR">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XEm-iP-8wI">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -30,15 +30,15 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="2Xt-iW-Iuh" secondAttribute="bottom" id="3Ig-2o-3KV"/>
-                    <constraint firstItem="2Xt-iW-Iuh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="6Ol-XM-aa2"/>
-                    <constraint firstAttribute="trailing" secondItem="2Xt-iW-Iuh" secondAttribute="trailing" id="Ab6-mu-mWi"/>
-                    <constraint firstItem="2Xt-iW-Iuh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="oE0-Mf-HGM"/>
+                    <constraint firstAttribute="trailing" secondItem="Mc7-jB-uw9" secondAttribute="trailing" id="SGf-n7-Xvn"/>
+                    <constraint firstItem="Mc7-jB-uw9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="TuX-AO-5YF"/>
+                    <constraint firstItem="Mc7-jB-uw9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="XMp-ls-jqf"/>
+                    <constraint firstAttribute="bottom" secondItem="Mc7-jB-uw9" secondAttribute="bottom" id="Z86-5l-yqX"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="businessLineCollectionView" destination="2Xt-iW-Iuh" id="xwf-az-eN6"/>
+                <outlet property="businessLineCollectionView" destination="Mc7-jB-uw9" id="V84-x5-qDA"/>
             </connections>
             <point key="canvasLocation" x="-24.427480916030532" y="44.718309859154935"/>
         </tableViewCell>

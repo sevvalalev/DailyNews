@@ -27,7 +27,9 @@ class NewsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationController?.navigationBar.tintColor = .systemBackground
+        newsImageView.layer.cornerRadius = 10
         configureData()
         configureFont()
     }

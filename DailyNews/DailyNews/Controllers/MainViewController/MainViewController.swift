@@ -137,7 +137,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             let vc = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
             vc.news = selectedNews
             self.navigationController?.pushViewController(vc, animated: true)
-        }
+         }
     }
 
 

@@ -27,7 +27,6 @@ class BusinessLineCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
         newsTitle.setSameFont(fontSize: 22)
         newsDate.setSameFont(fontSize: 15)
         newsAuthor.setSameFont(fontSize: 15)

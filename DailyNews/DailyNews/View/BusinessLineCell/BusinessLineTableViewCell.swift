@@ -19,6 +19,7 @@ class BusinessLineTableViewCell: UITableViewCell {
     }
     
     var viewModel: BusinessLineCellViewModel?
+    var newsDetailViewController: NewsDetailViewController?
     
     @IBOutlet var businessLineCollectionView: UICollectionView!
     
@@ -68,18 +69,17 @@ extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewD
         if let cell = businessLineCollectionView.dequeueReusableCell(withReuseIdentifier: BusinessLineCollectionViewCell.identifier, for: indexPath) as? BusinessLineCollectionViewCell {
             let data = viewModel?.businessData?.news[indexPath.row]
             cell.configure(with: data)
+            
             return cell
         }
         return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.section == 1 {
-            let selectedNews = viewModel?.businessData?.news[indexPath.row]
-            let vc = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
-            vc.news = selectedNews
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+           let selectedNews = viewModel?.businessData?.news[indexPath.row]
+           let vc = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
+           vc.news = selectedNews
+        self.newsDetailViewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

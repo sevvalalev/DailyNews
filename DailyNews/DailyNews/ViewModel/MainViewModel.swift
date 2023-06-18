@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewModel {
     
-    var isLoading: Observable<Bool> = Observable(true)
+    var isLoading: Observable<Bool> = Observable(false)
     var isInitialDataLoaded: Observable<Bool> = Observable(false)
     var newsDataSource: NewsModel?
     var coinDataSource: CoinModel?

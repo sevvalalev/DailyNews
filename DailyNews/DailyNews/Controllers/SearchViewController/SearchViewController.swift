@@ -13,6 +13,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     
     var viewModel = SearchViewModel()
+    var news: News?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(viewModel.heightForRowAt())
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = NewsDetailViewController()
+        let selectedNews = viewModel.searchResults?.news[indexPath.row]
+        vc.news = selectedNews
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
