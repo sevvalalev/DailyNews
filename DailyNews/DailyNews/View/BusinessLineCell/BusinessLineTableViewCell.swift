@@ -75,12 +75,6 @@ extension BusinessLineTableViewCell: UICollectionViewDelegate, UICollectionViewD
         return UICollectionViewCell()
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-           let selectedNews = viewModel?.businessData?.news[indexPath.row]
-           let vc = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
-           vc.news = selectedNews
-        self.newsDetailViewController?.navigationController?.pushViewController(vc, animated: true)
-    }
 }
 
 extension BusinessLineTableViewCell: UICollectionViewDelegateFlowLayout {
