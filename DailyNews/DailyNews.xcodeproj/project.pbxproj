@@ -143,7 +143,6 @@
 				A45388E12A0BD105003FDB43 /* Controllers */,
 				A45388E72A0BD18D003FDB43 /* ViewModel */,
 				A45388E62A0BD15D003FDB43 /* View */,
-				A45389172A0CED33003FDB43 /* CategoryCell */,
 				A45388CC2A0B9C36003FDB43 /* AppDelegate.swift */,
 				A45388D72A0B9C38003FDB43 /* LaunchScreen.storyboard */,
 				A45388DA2A0B9C38003FDB43 /* Info.plist */,
@@ -210,6 +209,7 @@
 			children = (
 				A45388F82A0C1DE4003FDB43 /* CurrencyCell */,
 				A453890E2A0CE537003FDB43 /* AllNewsTableViewCell */,
+				A45389172A0CED33003FDB43 /* CategoryCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
