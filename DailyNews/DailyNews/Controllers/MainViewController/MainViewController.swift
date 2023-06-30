@@ -73,12 +73,6 @@ class MainViewController: UIViewController {
         let customCellNib: UINib = UINib(nibName: "CoinCell", bundle: nil)
         tableView.register(customCellNib, forCellReuseIdentifier: CoinCell.identifier)
         
-        let customFirstLineCellNib: UINib = UINib(nibName: "BusinessLineTableViewCell", bundle: nil)
-        tableView.register(customFirstLineCellNib, forCellReuseIdentifier: BusinessLineTableViewCell.identifier)
-        
-        let categoryCellNib: UINib = UINib(nibName: "CategoryTableViewCell", bundle: nil)
-        tableView.register(categoryCellNib, forCellReuseIdentifier: CategoryTableViewCell.identifier)
-        
         let customSecondTableViewCell: UINib = UINib(nibName: "AllNewsTableViewCell", bundle: nil)
         tableView.register(customSecondTableViewCell, forCellReuseIdentifier: AllNewsTableViewCell.identifier)
     }
@@ -104,21 +98,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 return cell
             }
+        
         }else if indexPath.section == 1 {
-            if let cell2 = tableView.dequeueReusableCell(withIdentifier: BusinessLineTableViewCell.identifier, for: indexPath) as? BusinessLineTableViewCell {
-                if let businessData = viewModel.businessDataSource {
-                    let businessNews = BusinessLineCellViewModel(businessData: businessData)
-                    cell2.configure(viewModel: businessNews)
-                }
-                tableView.separatorStyle = .none
-                return cell2
-            }
-        }else if indexPath.section == 2 {
-            if let cell3 = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath) as? CategoryTableViewCell {
-                tableView.separatorStyle = .none
-                return cell3
-            }
-        }else if indexPath.section == 3 {
             if let cell4 = tableView.dequeueReusableCell(withIdentifier: AllNewsTableViewCell.identifier, for: indexPath) as? AllNewsTableViewCell {
                 if let allNewsData = viewModel.newsDataSource?.news[indexPath.row] {
                     let allNewsViewModel = AllNewsCellViewModel(allNewsData: allNewsData)
@@ -132,7 +113,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         if indexPath.section == 3 {
+         if indexPath.section == 1 {
             let selectedNews = viewModel.newsDataSource?.news[indexPath.row]
             let vc = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
             vc.news = selectedNews

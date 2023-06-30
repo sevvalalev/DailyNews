@@ -19,11 +19,11 @@ class MainViewModel {
     private var dispatchGroup = DispatchGroup()
     
     func numberOfSections() -> Int {
-        return 4
+        return 2
     }
     
     func numberOfRows(in section: Int) -> Int {
-        if section == 3 {
+        if section == 1 {
             return newsDataSource?.news.count ?? 0
         } else {
             return 1
@@ -34,11 +34,7 @@ class MainViewModel {
         if indexPath.section == 0 {
             return 60
         } else if indexPath.section == 1 {
-             return 370
-        } else if indexPath.section == 2 {
-             return 60
-        } else if indexPath.section == 3 {
-            return 220
+            return 230
         }
         return 200
     }
@@ -66,17 +62,6 @@ class MainViewModel {
             self.dispatchGroup.leave()
         }
         
-        
-        dispatchGroup.enter()
-        getBusinessData { result in
-            switch result {
-            case .success(let success):
-                self.businessDataSource = success
-            case .failure(let error):
-                print("ERR : While fetching all news -> \(error.localizedDescription)")
-            }
-            self.dispatchGroup.leave()
-        }
         
         dispatchGroup.notify(queue: .main) { [weak self] in
             self?.isInitialDataLoaded.value = true
@@ -111,15 +96,4 @@ extension MainViewModel {
         }
     }
      
-    
-    func getBusinessData(completion: @escaping(Result<NewsModel, Error>) -> Void) {
-        APICaller.getDataByCategory(categoryName: "business") { result in
-            switch result {
-            case .success(let data):
-                completion(.success(data))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
-    }
 }
