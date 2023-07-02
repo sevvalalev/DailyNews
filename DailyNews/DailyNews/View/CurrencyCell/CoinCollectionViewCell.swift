@@ -18,10 +18,12 @@ class CoinCollectionViewCell: UICollectionViewCell {
     // MARK: IBOutlets
     @IBOutlet weak var coinNameLabel: UILabel!
     @IBOutlet weak var coinRateLabel: UILabel!
+    @IBOutlet weak var coinView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        coinView.layer.cornerRadius = 10
         coinNameLabel.setSameFont(fontSize: 16)
         coinRateLabel.setSameFont(fontSize: 16)
     }

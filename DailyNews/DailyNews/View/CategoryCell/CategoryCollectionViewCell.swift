@@ -10,17 +10,25 @@ import UIKit
 class CategoryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var categoryView: UIView!
-    @IBOutlet weak var categoryNameLabel: UILabel!
+    @IBOutlet weak var categoryNameButton: UIButton!
     
     static var identifier = "CategoryCollectionViewCell"
+    
+    private var viewModel: CategoryCellViewModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        categoryNameLabel.setSameFont(withText: "Category", fontSize: 20)
-        categoryNameLabel.textColor = .white
-        categoryView.backgroundColor = .black
+        categoryNameButton.setSameFont(fontSize:20)
+        
+        categoryView.backgroundColor = .darkGray
         categoryView.layer.cornerRadius = 10
+
     }
+    
+    @IBAction func categoryNameButtonTapped(_ sender: UIButton) {
+        
+    }
+    
 
 }

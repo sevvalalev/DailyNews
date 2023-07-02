@@ -22,19 +22,25 @@ class SearchTableViewCell: UITableViewCell {
     }
     
     override func awakeFromNib() {
-            super.awakeFromNib()
-            
+        super.awakeFromNib()
+        
+        configureUI()
+        
+        
+    }
+    
+    private func configureUI() {
         titleLabel.setSameFont(fontSize: 25)
         dateLabel.setSameFont(fontSize: 15)
         descriptionLabel.setSameFont(fontSize:15)
-
-        }
-
-
-        func configure(with searchResult: News?) {
-            titleLabel.text = searchResult?.title
-            dateLabel.text = searchResult?.publishDate
-            descriptionLabel.text = searchResult?.description
-            newsImageView.sd_setImage(with: URL(string: searchResult?.image ?? ""), placeholderImage: UIImage(named: ""))
-        }
+        newsImageView.layer.cornerRadius = 10
     }
+    
+    
+    func configure(with searchResult: News?) {
+        titleLabel.text = searchResult?.title
+        dateLabel.text = searchResult?.publishDate
+        descriptionLabel.text = searchResult?.description
+        newsImageView.sd_setImage(with: URL(string: searchResult?.image ?? ""), placeholderImage: UIImage(named: ""))
+    }
+}

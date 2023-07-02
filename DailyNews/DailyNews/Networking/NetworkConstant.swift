@@ -17,14 +17,14 @@ class NetworkConstant {
     
     public var allNewsAddress: String {
         get {
-            return "https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_ACCESS_KEY"
+            return "https://newsapi.org/v2/top-headlines?country=us&apiKey=0952307ff29044ad8273f2d2a177eb23"
         }
     }
     
     public var coinApi: String {
         get{
-            //return "http://api.coinlayer.com/live?access_key=YOUR_ACCESS_KEY"
-            return ""
+            //return "http://api.coinlayer.com/live?access_key=3615ccb3c386cebc33f9064f81af86a9"
+                return ""
         }
     }
 }

@@ -21,17 +21,31 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWk-yN-eAb">
                         <rect key="frame" x="0.0" y="0.0" width="296" height="158"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdS-nL-pPY">
-                                <rect key="frame" x="88.333333333333343" y="68.666666666666671" width="119.33333333333334" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXI-Sd-MYI">
+                                <rect key="frame" x="0.0" y="0.0" width="296" height="158"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Category Name">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="categoryNameButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="FeM-vg-v6R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wdS-nL-pPY" firstAttribute="centerY" secondItem="CWk-yN-eAb" secondAttribute="centerY" id="4xS-DK-Dkf"/>
-                            <constraint firstItem="wdS-nL-pPY" firstAttribute="centerX" secondItem="CWk-yN-eAb" secondAttribute="centerX" id="NB6-Az-tDN"/>
+                            <constraint firstAttribute="trailing" secondItem="ZXI-Sd-MYI" secondAttribute="trailing" id="M5f-fe-iV5"/>
+                            <constraint firstItem="ZXI-Sd-MYI" firstAttribute="leading" secondItem="CWk-yN-eAb" secondAttribute="leading" id="TYL-8T-3Um"/>
+                            <constraint firstItem="ZXI-Sd-MYI" firstAttribute="top" secondItem="CWk-yN-eAb" secondAttribute="top" id="bfb-et-WkL"/>
+                            <constraint firstAttribute="bottom" secondItem="ZXI-Sd-MYI" secondAttribute="bottom" id="kMn-Ip-OEm"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -45,7 +59,7 @@
             </constraints>
             <size key="customSize" width="296" height="158"/>
             <connections>
-                <outlet property="categoryNameLabel" destination="wdS-nL-pPY" id="jxF-s3-jeh"/>
+                <outlet property="categoryNameButton" destination="ZXI-Sd-MYI" id="rO7-Bx-b4I"/>
                 <outlet property="categoryView" destination="CWk-yN-eAb" id="qpr-ce-aBP"/>
             </connections>
             <point key="canvasLocation" x="181.67938931297709" y="31.690140845070424"/>

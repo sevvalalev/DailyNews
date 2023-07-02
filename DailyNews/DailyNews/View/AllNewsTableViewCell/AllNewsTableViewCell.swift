@@ -16,6 +16,7 @@ class AllNewsTableViewCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var allNewsView: UIView!
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsDate: UILabel!
@@ -24,7 +25,6 @@ class AllNewsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
      
-        self.contentView.layer.cornerRadius = 10
         newsTitle.setSameFont(fontSize: 19)
         newsDate.setSameFont(fontSize: 12)
         authorLabel.setSameFont(fontSize: 12)

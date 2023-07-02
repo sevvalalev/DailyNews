@@ -28,7 +28,7 @@ class NewsDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.tintColor = .systemBackground
+        navigationController?.navigationBar.tintColor = .gray
         newsImageView.layer.cornerRadius = 10
         configureData()
         configureFont()
@@ -36,11 +36,10 @@ class NewsDetailViewController: UIViewController {
     
     private func configureFont() {
         newsLabel.setSameFont(fontSize:22)
-        newsLabel.text = newsLabel.text?.uppercased()
         dateLabel.setSameFont(fontSize:14)
-        authorLabel.setSameFont(fontSize:14)
-        descriptionLabel.setSameFont(fontSize:15)
-        newsDetailLabel.setSameFont(fontSize:16)
+        authorLabel.setSameFont(fontSize:16)
+        descriptionLabel.setSameFont(fontSize:18)
+        newsDetailLabel.setSameFont(fontSize:18)
     }
     
     func configureData() {

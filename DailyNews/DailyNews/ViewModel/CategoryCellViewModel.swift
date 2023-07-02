@@ -15,4 +15,6 @@ class CategoryCellViewModel {
         return categories.count ?? 1
     }
     
+    
+    
 }

@@ -12,6 +12,8 @@
 		A4245CFD2A4F386F007B4C14 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4245CFB2A4F386F007B4C14 /* CategoriesViewController.xib */; };
 		A4245D002A4F5322007B4C14 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4245CFE2A4F5322007B4C14 /* CategoryCollectionViewCell.swift */; };
 		A4245D012A4F5322007B4C14 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4245CFF2A4F5322007B4C14 /* CategoryCollectionViewCell.xib */; };
+		A4245D052A51F03D007B4C14 /* SelectedCategoryNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4245D032A51F03D007B4C14 /* SelectedCategoryNewsViewController.swift */; };
+		A4245D062A51F03D007B4C14 /* SelectedCategoryNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4245D042A51F03D007B4C14 /* SelectedCategoryNewsViewController.xib */; };
 		A426502F2A349A4E00729FB6 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A426502D2A349A4E00729FB6 /* NewsDetailViewController.swift */; };
 		A42650302A349A4E00729FB6 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A426502E2A349A4E00729FB6 /* NewsDetailViewController.xib */; };
 		A45388CD2A0B9C36003FDB43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45388CC2A0B9C36003FDB43 /* AppDelegate.swift */; };
@@ -50,6 +52,8 @@
 		A4245CFB2A4F386F007B4C14 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
 		A4245CFE2A4F5322007B4C14 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4245CFF2A4F5322007B4C14 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		A4245D032A51F03D007B4C14 /* SelectedCategoryNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryNewsViewController.swift; sourceTree = "<group>"; };
+		A4245D042A51F03D007B4C14 /* SelectedCategoryNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedCategoryNewsViewController.xib; sourceTree = "<group>"; };
 		A426502D2A349A4E00729FB6 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		A426502E2A349A4E00729FB6 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailViewController.xib; sourceTree = "<group>"; };
 		A45388C92A0B9C36003FDB43 /* DailyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,15 @@
 				95640CDA24A02C2BCE993AB6 /* Pods-DailyNews.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A4245D022A51EFE0007B4C14 /* SelectedCategoryNews */ = {
+			isa = PBXGroup;
+			children = (
+				A4245D032A51F03D007B4C14 /* SelectedCategoryNewsViewController.swift */,
+				A4245D042A51F03D007B4C14 /* SelectedCategoryNewsViewController.xib */,
+			);
+			path = SelectedCategoryNews;
 			sourceTree = "<group>";
 		};
 		A426502C2A3499F700729FB6 /* NewsDetailViewController */ = {
@@ -165,6 +178,7 @@
 				A426502C2A3499F700729FB6 /* NewsDetailViewController */,
 				A470C65F2A262B820085830F /* SearchViewController */,
 				A470C6602A262B950085830F /* CategoriesViewController */,
+				A4245D022A51EFE0007B4C14 /* SelectedCategoryNews */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -368,6 +382,7 @@
 				A45389122A0CE596003FDB43 /* AllNewsTableViewCell.xib in Resources */,
 				A4245CFD2A4F386F007B4C14 /* CategoriesViewController.xib in Resources */,
 				A42650302A349A4E00729FB6 /* NewsDetailViewController.xib in Resources */,
+				A4245D062A51F03D007B4C14 /* SelectedCategoryNewsViewController.xib in Resources */,
 				A45388EB2A0BD1BB003FDB43 /* MainViewController.xib in Resources */,
 				A45388D62A0B9C38003FDB43 /* Assets.xcassets in Resources */,
 				A45D31552A2A3FDE00F1ECFB /* SearchTableViewCell.xib in Resources */,
@@ -426,6 +441,7 @@
 			files = (
 				A45388FF2A0C2B96003FDB43 /* CoinCollectionViewCell.swift in Sources */,
 				A45388FB2A0C1E12003FDB43 /* CoinCell.swift in Sources */,
+				A4245D052A51F03D007B4C14 /* SelectedCategoryNewsViewController.swift in Sources */,
 				A4C229DA2A160E6C00EEDB4A /* Observable.swift in Sources */,
 				A45389212A0D1495003FDB43 /* CategoryCellViewModel.swift in Sources */,
 				A4C229DE2A18E3FB00EEDB4A /* AllNewsCellViewModel.swift in Sources */,
