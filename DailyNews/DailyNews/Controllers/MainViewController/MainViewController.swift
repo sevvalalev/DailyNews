@@ -26,6 +26,8 @@ class MainViewController: UIViewController {
         configNav()
     }
     
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.loadInitialData()
@@ -73,8 +75,11 @@ class MainViewController: UIViewController {
         let customCellNib: UINib = UINib(nibName: "CoinCell", bundle: nil)
         tableView.register(customCellNib, forCellReuseIdentifier: CoinCell.identifier)
         
-        let customSecondTableViewCell: UINib = UINib(nibName: "AllNewsTableViewCell", bundle: nil)
-        tableView.register(customSecondTableViewCell, forCellReuseIdentifier: AllNewsTableViewCell.identifier)
+        let customThirdTableViewCell: UINib = UINib(nibName: "AllNewsTableViewCell", bundle: nil)
+        tableView.register(customThirdTableViewCell, forCellReuseIdentifier: AllNewsTableViewCell.identifier)
+        
+        let categoryCellNib: UINib = UINib(nibName: "CategoryTableViewCell", bundle: nil)
+        tableView.register(categoryCellNib, forCellReuseIdentifier: CategoryTableViewCell.identifier)
     }
     
 }
@@ -98,22 +103,28 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 return cell
             }
-        
         }else if indexPath.section == 1 {
-            if let cell4 = tableView.dequeueReusableCell(withIdentifier: AllNewsTableViewCell.identifier, for: indexPath) as? AllNewsTableViewCell {
+                if let cell3 = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath) as? CategoryTableViewCell {
+                    cell3.delegate = self
+                    tableView.separatorStyle = .none
+                    return cell3
+                }
+            }else if indexPath.section == 2 {
+                if let cell3 = tableView.dequeueReusableCell(withIdentifier: AllNewsTableViewCell.identifier, for: indexPath) as? AllNewsTableViewCell {
                 if let allNewsData = viewModel.newsDataSource?.news[indexPath.row] {
                     let allNewsViewModel = AllNewsCellViewModel(allNewsData: allNewsData)
-                    cell4.configureCell(viewModel: allNewsViewModel)
+                    cell3.configureCell(viewModel: allNewsViewModel)
                 }
                 tableView.separatorStyle = .none
-                return cell4
+                return cell3
             }
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         if indexPath.section == 1 {
+         
+        if indexPath.section == 2 {
             let selectedNews = viewModel.newsDataSource?.news[indexPath.row]
             let vc = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
             vc.news = selectedNews
@@ -127,4 +138,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return CGFloat(viewModel.heightForRowAt(indexPath: indexPath))
     }
     
+}
+
+// MARK: - Selected category delegate
+extension MainViewController: SelectedCategoryDelegate {
+    func categorySelected(category: String) {
+        print(category)
+    }
 }

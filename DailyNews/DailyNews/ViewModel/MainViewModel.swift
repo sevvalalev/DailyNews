@@ -19,11 +19,11 @@ class MainViewModel {
     private var dispatchGroup = DispatchGroup()
     
     func numberOfSections() -> Int {
-        return 2
+        return 3
     }
     
     func numberOfRows(in section: Int) -> Int {
-        if section == 1 {
+        if section == 2 {
             return newsDataSource?.news.count ?? 0
         } else {
             return 1
@@ -34,6 +34,8 @@ class MainViewModel {
         if indexPath.section == 0 {
             return 60
         } else if indexPath.section == 1 {
+            return 60
+        }else if indexPath.section == 2{
             return 230
         }
         return 200

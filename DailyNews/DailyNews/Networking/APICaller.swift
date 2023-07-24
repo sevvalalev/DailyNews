@@ -55,28 +55,4 @@ class APICaller {
         
     }
     
-    static func getDataByCategory(categoryName: String,completionHandler: @escaping (_ result: Result<NewsModel,NetworkError>) -> Void ) {
-        
-        let urlString = "https://newsapi.org/v2/top-headlines?country=us&apiKey=0952307ff29044ad8273f2d2a177eb23&category=\(categoryName)"
-        
-        guard let url = URL(string: urlString) else {
-            completionHandler(.failure(.urlError))
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
-            if error == nil,
-               let data = dataResponse {
-                do {
-                    let resultData = try JSONDecoder().decode(NewsModel.self, from: data)
-                    completionHandler(.success(resultData))
-                } catch let error {
-                    print("Error while parsing data \(error)")
-                    completionHandler(.failure(.canNotParseData))
-                }
-            } else {
-                completionHandler(.failure(.canNotParseData))
-            }
-        }.resume()
-    }
 }

@@ -22,6 +22,7 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var newsDetailLabel: UITextView!
+    @IBOutlet weak var readMoreButton: UIButton!
     var news: News?
     
     
@@ -38,7 +39,12 @@ class NewsDetailViewController: UIViewController {
         newsLabel.setSameFont(fontSize:22)
         dateLabel.setSameFont(fontSize:14)
         authorLabel.setSameFont(fontSize:16)
-        descriptionLabel.setSameFont(fontSize:18)
+        readMoreButton.titleLabel?.setSameFont(fontSize: 20)
+        readMoreButton.titleLabel?.textColor = .white
+        readMoreButton.titleLabel?.text = "Read More"
+        readMoreButton.layer.borderWidth = 0.5
+        readMoreButton.layer.cornerRadius = 10
+        readMoreButton.layer.borderColor = UIColor.white.cgColor
         newsDetailLabel.setSameFont(fontSize:18)
     }
     
@@ -50,8 +56,14 @@ class NewsDetailViewController: UIViewController {
         newsLabel.text = news.title
         dateLabel.text = news.publishDate
         authorLabel.text = news.author
-        descriptionLabel.text = news.description
-        newsDetailLabel.text = news.content
+        newsDetailLabel.text = news.description
         newsImageView.sd_setImage(with: URL(string: news.image ?? ""), placeholderImage: UIImage(named: ""))
+    }
+    
+    
+    @IBAction func readMoreButtonTapped(_ sender: UIButton) {
+        if let urlString = news?.url, let url = URL(string: urlString) {
+                UIApplication.shared.open(url)
+            }
     }
 }

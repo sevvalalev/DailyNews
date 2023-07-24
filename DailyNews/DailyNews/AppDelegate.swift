@@ -42,12 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         searchViewController.navigationBar.backgroundColor = .black
         searchViewController.toolbar.barStyle = .black
         
-        let favoritesViewController = UINavigationController(rootViewController: CategoriesViewController())
-        favoritesViewController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage(systemName: "list.bullet.rectangle"), tag: 2)
-        favoritesViewController.navigationBar.backgroundColor = .black
-        favoritesViewController.toolbar.barStyle = .black
-        
-        tabBarController.viewControllers = [mainViewController,favoritesViewController, searchViewController]
+        tabBarController.viewControllers = [mainViewController, searchViewController]
         
         window.rootViewController = tabBarController
         
