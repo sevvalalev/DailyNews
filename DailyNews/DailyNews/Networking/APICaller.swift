@@ -12,7 +12,6 @@ enum NetworkError: Error {
     case canNotParseData
 }
 
-
 class APICaller {
     
     static func getAllNews(completionHandler: @escaping (_ result: Result<NewsModel,NetworkError>) -> Void ) {

@@ -9,7 +9,13 @@ import Foundation
 
 class CategoryCellViewModel {
     
-    let categories = ["Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"]
+    let categories = [Category(name: "General", isSelected: false),
+                      Category(name: "Business", isSelected: false),
+                      Category(name: "Entertainment", isSelected: false),
+                      Category(name: "Health", isSelected: false),
+                      Category(name: "Science", isSelected: false),
+                      Category(name: "Sports", isSelected: false),
+                      Category(name: "Technology", isSelected: false)]
     
     func numberOfItemsInSection() -> Int {
         return categories.count ?? 1

@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     var viewModel: MainViewModel = MainViewModel()
     // MARK: variables
     var cellDataSource: [AllNewsCellViewModel] = []
+    var selectedCategory: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,6 @@ class MainViewController: UIViewController {
         customNibs()
         configNav()
     }
-    
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -46,7 +45,7 @@ class MainViewController: UIViewController {
                 }
             }
         }
-        viewModel.isInitialDataLoaded.bind { isLoaded in
+        viewModel.isDataLoaded.bind { isLoaded in
             if isLoaded ?? false {
                 DispatchQueue.main.async { [weak self] in
                     self?.tableView.reloadData()
@@ -103,9 +102,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 return cell
             }
-        }else if indexPath.section == 1 {
+        } else if indexPath.section == 1 {
                 if let cell3 = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath) as? CategoryTableViewCell {
                     cell3.delegate = self
+                    cell3.selectedCategory = selectedCategory
                     tableView.separatorStyle = .none
                     return cell3
                 }
@@ -132,17 +132,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
          }
     }
 
-
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(viewModel.heightForRowAt(indexPath: indexPath))
     }
-    
 }
 
 // MARK: - Selected category delegate
 extension MainViewController: SelectedCategoryDelegate {
     func categorySelected(category: String) {
-        print(category)
+        selectedCategory = category
+        viewModel.loadNewsData(for: category) 
     }
 }
+

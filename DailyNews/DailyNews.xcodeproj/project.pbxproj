@@ -43,6 +43,7 @@
 		A4C229DE2A18E3FB00EEDB4A /* AllNewsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C229DD2A18E3FB00EEDB4A /* AllNewsCellViewModel.swift */; };
 		A4ED54D42A66C51B006D3219 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED54D22A66C51B006D3219 /* CategoryTableViewCell.swift */; };
 		A4ED54D52A66C51B006D3219 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4ED54D32A66C51B006D3219 /* CategoryTableViewCell.xib */; };
+		A4ED54D72A6ECC58006D3219 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED54D62A6ECC58006D3219 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		A4C229DD2A18E3FB00EEDB4A /* AllNewsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsCellViewModel.swift; sourceTree = "<group>"; };
 		A4ED54D22A66C51B006D3219 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		A4ED54D32A66C51B006D3219 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		A4ED54D62A6ECC58006D3219 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F5111C07ED431882176A932F /* Pods_DailyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -195,6 +197,7 @@
 			children = (
 				A45389222A0D29AF003FDB43 /* NewsModel.swift */,
 				A4C229DB2A169E9200EEDB4A /* CoinModel.swift */,
+				A4ED54D62A6ECC58006D3219 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				A45389112A0CE596003FDB43 /* AllNewsTableViewCell.swift in Sources */,
 				A45D31512A2A27C000F1ECFB /* SearchViewModel.swift in Sources */,
 				A45389232A0D29AF003FDB43 /* NewsModel.swift in Sources */,
+				A4ED54D72A6ECC58006D3219 /* Category.swift in Sources */,
 				A45388CD2A0B9C36003FDB43 /* AppDelegate.swift in Sources */,
 				A470C6632A262BCB0085830F /* SearchViewController.swift in Sources */,
 				A45388EA2A0BD1BB003FDB43 /* MainViewController.swift in Sources */,

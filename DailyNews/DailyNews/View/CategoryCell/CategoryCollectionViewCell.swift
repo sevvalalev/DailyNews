@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SelectedCategoryDelegate: AnyObject {
-    func categorySelected(category: String)
+    func categorySelected(category: Category)
 }
 
 class CategoryCollectionViewCell: UICollectionViewCell {
@@ -20,7 +20,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     private var viewModel: CategoryCellViewModel?
     
-    private var category: String?
+    private var category: Category?
     
     private weak var delegate: SelectedCategoryDelegate?
     
@@ -34,11 +34,20 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func configure(delegate: SelectedCategoryDelegate?, category: String) {
+    func configure(delegate: SelectedCategoryDelegate?, category: Category) {
         self.category = category
         self.delegate = delegate
         categoryNameButton.titleLabel?.setSameFont(fontSize: 16)
-        categoryNameButton.setTitle(category, for: .normal)
+        categoryNameButton.setTitle(category.name, for: .normal)
+        
+        if category.isSelected {
+            
+        }
+    }
+    
+    func setBackgroundColor() {
+        guard let category = category else { return }
+        delegate?.categorySelected(category: category)
     }
     
     @IBAction func categoryNameButtonTapped(_ sender: UIButton) {

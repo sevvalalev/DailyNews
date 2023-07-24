@@ -11,7 +11,7 @@ import UIKit
 class MainViewModel {
     
     var isLoading: Observable<Bool> = Observable(false)
-    var isInitialDataLoaded: Observable<Bool> = Observable(false)
+    var isDataLoaded: Observable<Bool> = Observable(false)
     var newsDataSource: NewsModel?
     var coinDataSource: CoinModel?
     var businessDataSource: NewsModel?
@@ -41,6 +41,20 @@ class MainViewModel {
         return 200
     }
     
+    func loadNewsData(for category: String) {
+        CategoryCellViewModel.getDataByCategory(categoryName: category) { [weak self] result in
+            switch result {
+            case .success(let newsData):
+                self?.newsDataSource = newsData
+                self?.isDataLoaded.value = true
+            case .failure(let error):
+                print("Error loading news data: \(error)")
+                self?.isDataLoaded.value = false
+            }
+        }
+    }
+    
+    
     func loadInitialData() {
         dispatchGroup.enter()
         getAllData { result in
@@ -66,7 +80,7 @@ class MainViewModel {
         
         
         dispatchGroup.notify(queue: .main) { [weak self] in
-            self?.isInitialDataLoaded.value = true
+            self?.isDataLoaded.value = true
         }
         
     }

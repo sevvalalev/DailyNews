@@ -21,6 +21,7 @@ class CategoryTableViewCell: UITableViewCell {
         
     let viewModel: CategoryCellViewModel = CategoryCellViewModel()
     weak var delegate: SelectedCategoryDelegate?
+    var selectedCategory: String?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -63,7 +64,6 @@ extension CategoryTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         }
         return UICollectionViewCell()
     }
-    
 }
 
 extension CategoryTableViewCell: UICollectionViewDelegateFlowLayout {
