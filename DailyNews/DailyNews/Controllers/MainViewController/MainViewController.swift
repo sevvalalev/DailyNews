@@ -139,9 +139,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - Selected category delegate
 extension MainViewController: SelectedCategoryDelegate {
-    func categorySelected(category: String) {
-        selectedCategory = category
-        viewModel.loadNewsData(for: category) 
+    func categorySelected(category: Category) {
+        selectedCategory = category.name
+        viewModel.loadNewsData(for: category.name)
     }
 }
 

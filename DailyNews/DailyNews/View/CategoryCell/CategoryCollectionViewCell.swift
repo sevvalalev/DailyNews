@@ -40,9 +40,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         categoryNameButton.titleLabel?.setSameFont(fontSize: 16)
         categoryNameButton.setTitle(category.name, for: .normal)
         
-        if category.isSelected {
-            
-        }
     }
     
     func setBackgroundColor() {
