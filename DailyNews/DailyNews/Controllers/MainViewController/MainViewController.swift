@@ -103,20 +103,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 return cell
             }
         } else if indexPath.section == 1 {
-                if let cell3 = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath) as? CategoryTableViewCell {
-                    cell3.delegate = self
-                    cell3.selectedCategory = selectedCategory
+                if let cell1 = tableView.dequeueReusableCell(withIdentifier: CategoryTableViewCell.identifier, for: indexPath) as? CategoryTableViewCell {
+                    cell1.delegate = self
+                    cell1.selectedCategory = selectedCategory
                     tableView.separatorStyle = .none
-                    return cell3
+                    return cell1
                 }
             }else if indexPath.section == 2 {
-                if let cell3 = tableView.dequeueReusableCell(withIdentifier: AllNewsTableViewCell.identifier, for: indexPath) as? AllNewsTableViewCell {
+                if let cell2 = tableView.dequeueReusableCell(withIdentifier: AllNewsTableViewCell.identifier, for: indexPath) as? AllNewsTableViewCell {
                 if let allNewsData = viewModel.newsDataSource?.news[indexPath.row] {
                     let allNewsViewModel = AllNewsCellViewModel(allNewsData: allNewsData)
-                    cell3.configureCell(viewModel: allNewsViewModel)
+                    cell2.configureCell(viewModel: allNewsViewModel)
                 }
                 tableView.separatorStyle = .none
-                return cell3
+                return cell2
             }
         }
         return UITableViewCell()

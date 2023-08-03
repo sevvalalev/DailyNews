@@ -28,8 +28,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         categoryNameButton.setSameFont(fontSize:20)
-        
-        categoryView.backgroundColor = .darkGray
         categoryView.layer.cornerRadius = 10
         
     }
@@ -50,5 +48,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBAction func categoryNameButtonTapped(_ sender: UIButton) {
         guard let category else { return }
         delegate?.categorySelected(category: category)
+        if category.isSelected {
+            self.categoryView.backgroundColor = .blue
+            categoryNameButton.backgroundColor = .blue
+        }
     }
 }
